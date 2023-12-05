@@ -31,3 +31,4 @@ Lab 13:
 -diploma final
 Lab 14:
 -tot ce ramane nefinalizat din urma
+-sunete maybe
