@@ -21,7 +21,10 @@ Lab 12:
 -funxtionalitati lichid (curgere + amestecare)
 -functionalitate ingrediente solide
 Lab 13:
--functionalitate noapte: venire clienti, comenzi, punctaje
+-functionalitate noapte: 
+-venire clienti
+-comenzi
+-punctaje
 -rewards la finalul noptii
 Lab 14:
 -tot ce ramane nefinalizat din urma
