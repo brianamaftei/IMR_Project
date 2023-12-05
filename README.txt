@@ -9,6 +9,8 @@ Am realizat scena principala, continand barul care va fi spatiul efectiv de joc,
 Desi multe din obiectele de care avem nevoie se pot gasi online, am ales sa realizam sala si clientii proprii pentru a conferi proiectului un stil unic noua.
 Am intampinat dificultati la exportul clientilor, deoarece am realizat toate variatiile in acelasi proiect blender. De asemenea, peretii barului nu au fost exportati corect si au trebuit sa fie refacuti.
 
+
+**Urmatoarele sunt limite superioare orientative. Daca perfectionam doar lucrurile de baza e foarte bine
 Lab 11: 
 -optimizare texturi
 -creative mode (all recipes)
@@ -26,5 +28,6 @@ Lab 13:
 -comenzi
 -punctaje
 -rewards la finalul noptii
+-diploma final
 Lab 14:
 -tot ce ramane nefinalizat din urma
