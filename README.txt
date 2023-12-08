@@ -32,3 +32,8 @@ Lab 13:
 Lab 14:
 -tot ce ramane nefinalizat din urma
 -sunete maybe
+
+
+what we actually did (so far):
+Lab11:
+-optimizare texturi fbx camera
