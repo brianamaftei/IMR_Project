@@ -1,0 +1,323 @@
+Using pre-set license
+Built from '2021.3/staging' branch; Version is '2021.3.31f1 (3409e2af086f) revision 3410402'; Using compiler version '192829333'; Build Type 'Release'
+OS: 'Windows 10  (10.0.19045) 64bit Core' Language: 'ro' Physical Memory: 7502 MB
+BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 1
+
+COMMAND LINE ARGUMENTS:
+C:\Program Files\Unity\Hub\Editor\2021.3.31f1\Editor\Unity.exe
+-adb2
+-batchMode
+-noUpm
+-name
+AssetImportWorker54
+-projectPath
+C:/Users/pinza/Documents/GitHub/IMR_Project
+-logFile
+Logs/AssetImportWorker54.log
+-srvPort
+50272
+Successfully changed project path to: C:/Users/pinza/Documents/GitHub/IMR_Project
+C:/Users/pinza/Documents/GitHub/IMR_Project
+[UnityMemory] Configuration Parameters - Can be set up in boot.config
+    "memorysetup-bucket-allocator-granularity=16"
+    "memorysetup-bucket-allocator-bucket-count=8"
+    "memorysetup-bucket-allocator-block-size=33554432"
+    "memorysetup-bucket-allocator-block-count=8"
+    "memorysetup-main-allocator-block-size=16777216"
+    "memorysetup-thread-allocator-block-size=16777216"
+    "memorysetup-gfx-main-allocator-block-size=16777216"
+    "memorysetup-gfx-thread-allocator-block-size=16777216"
+    "memorysetup-cache-allocator-block-size=4194304"
+    "memorysetup-typetree-allocator-block-size=2097152"
+    "memorysetup-profiler-bucket-allocator-granularity=16"
+    "memorysetup-profiler-bucket-allocator-bucket-count=8"
+    "memorysetup-profiler-bucket-allocator-block-size=33554432"
+    "memorysetup-profiler-bucket-allocator-block-count=8"
+    "memorysetup-profiler-allocator-block-size=16777216"
+    "memorysetup-profiler-editor-allocator-block-size=1048576"
+    "memorysetup-temp-allocator-size-main=16777216"
+    "memorysetup-job-temp-allocator-block-size=2097152"
+    "memorysetup-job-temp-allocator-block-size-background=1048576"
+    "memorysetup-job-temp-allocator-reduction-small-platforms=262144"
+    "memorysetup-temp-allocator-size-background-worker=32768"
+    "memorysetup-temp-allocator-size-job-worker=262144"
+    "memorysetup-temp-allocator-size-preload-manager=33554432"
+    "memorysetup-temp-allocator-size-nav-mesh-worker=65536"
+    "memorysetup-temp-allocator-size-audio-worker=65536"
+    "memorysetup-temp-allocator-size-cloud-worker=32768"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gfx=262144"
+Player connection [22424] Host "[IP] 192.168.56.1 [Port] 0 [Flags] 2 [Guid] 29714837 [EditorId] 29714837 [Version] 1048832 [Id] WindowsEditor(7,LAPTOP-42ANUGFD) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined multi-casting on [225.0.0.222:54997]...
+
+Player connection [22424] Host "[IP] 192.168.56.1 [Port] 0 [Flags] 2 [Guid] 29714837 [EditorId] 29714837 [Version] 1048832 [Id] WindowsEditor(7,LAPTOP-42ANUGFD) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined alternative multi-casting on [225.0.0.222:34997]...
+
+[Physics::Module] Initialized MultithreadedJobDispatcher with {0} workers.
+Refreshing native plugins compatible for Editor in 158.99 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Initialize engine version: 2021.3.31f1 (3409e2af086f)
+[Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2021.3.31f1/Editor/Data/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path C:/Users/pinza/Documents/GitHub/IMR_Project/Assets
+GfxDevice: creating device client; threaded=0; jobified=0
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.1]
+    Renderer: AMD Radeon(TM) Graphics (ID=0x164c)
+    Vendor:   ATI
+    VRAM:     3751 MB
+    Driver:   27.20.15002.118
+Initialize mono
+Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2021.3.31f1/Editor/Data/Managed'
+Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2021.3.31f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
+Mono config path = 'C:/Program Files/Unity/Hub/Editor/2021.3.31f1/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56180
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2021.3.31f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.009468 seconds.
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 73.47 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.003 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1004ms)
+		BeginReloadAssembly (193ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (0ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (2ms)
+		EndReloadAssembly (647ms)
+			LoadAssemblies (190ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (183ms)
+			ReleaseScriptCaches (0ms)
+			RebuildScriptCaches (44ms)
+			SetupLoadedEditorAssemblies (361ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (11ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (74ms)
+				BeforeProcessingInitializeOnLoad (2ms)
+				ProcessInitializeOnLoadAttributes (206ms)
+				ProcessInitializeOnLoadMethodAttributes (68ms)
+				AfterProcessingInitializeOnLoad (0ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (0ms)
+Platform modules already initialized, skipping
+Registering precompiled user dll's ...
+Registered in 0.005060 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.67 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Package Manager log level set to [2]
+[Package Manager] Server::EnsureServerProcessIsRunning -- launch failed, reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] Cannot connect to Unity Package Manager local server
+Mono: successfully reloaded assembly
+- Completed reload, in  1.971 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1972ms)
+		BeginReloadAssembly (242ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (10ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (36ms)
+		EndReloadAssembly (1568ms)
+			LoadAssemblies (219ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (341ms)
+			ReleaseScriptCaches (1ms)
+			RebuildScriptCaches (72ms)
+			SetupLoadedEditorAssemblies (958ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (8ms)
+				SetLoadedEditorAssemblies (1ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (102ms)
+				ProcessInitializeOnLoadAttributes (812ms)
+				ProcessInitializeOnLoadMethodAttributes (28ms)
+				AfterProcessingInitializeOnLoad (7ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (9ms)
+Platform modules already initialized, skipping
+========================================================================
+Worker process is ready to serve import requests
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.08 seconds
+Refreshing native plugins compatible for Editor in 0.76 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3066 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 23 unused Assets / (46.7 KB). Loaded Objects now: 3527.
+Memory consumption went from 108.6 MB to 108.6 MB.
+Total: 3.499100 ms (FindLiveObjects: 0.421300 ms CreateObjectMapping: 0.106900 ms MarkObjects: 2.824600 ms  DeleteObjects: 0.144100 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:CustomObjectIndexerAttribute: bc11b3a6c3213fcdd17b65e7da85e133 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:SearchIndexIgnoredProperties: e643bd26f0fe6173181afceb89e7c659 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 202974.690325 seconds.
+  path: Assets/Mobilier/textures/woodceiling_1_normal-2K.png
+  artifactKey: Guid(579e3268434f91e4d9ad8fe372a1a151) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/Mobilier/textures/woodceiling_1_normal-2K.png using Guid(579e3268434f91e4d9ad8fe372a1a151) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f269e18a621df5a1ed8bcf2a302f7691') in 0.103083 seconds 
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 1557.670209 seconds.
+  path: Assets/Mobilier/textures/fotoliu.jpg
+  artifactKey: Guid(aff36283d92e17446b0ecb6bcc69cc0a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/Mobilier/textures/fotoliu.jpg using Guid(aff36283d92e17446b0ecb6bcc69cc0a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5162ed0f199fe07a8a5df6b3d806bec1') in 0.322237 seconds 
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000197 seconds.
+  path: Assets/Mobilier/textures/lemn_Normal.jpg
+  artifactKey: Guid(9402c85fee913f74d855886bf8a03505) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/Mobilier/textures/lemn_Normal.jpg using Guid(9402c85fee913f74d855886bf8a03505) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'dab154b4ad8c287b058657f5586ee2d6') in 0.121553 seconds 
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000067 seconds.
+  path: Assets/Mobilier/textures/plane__BaseColor 1.jpg
+  artifactKey: Guid(521865b67c914d746b8f743a55c32b94) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/Mobilier/textures/plane__BaseColor 1.jpg using Guid(521865b67c914d746b8f743a55c32b94) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9d0307f3740a27edbec1b35f4c11dbc3') in 0.068873 seconds 
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000061 seconds.
+  path: Assets/Mobilier/textures/masa_lateral_color.jpg
+  artifactKey: Guid(faade110857e1ca488292b5341ac4ace) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/Mobilier/textures/masa_lateral_color.jpg using Guid(faade110857e1ca488292b5341ac4ace) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8e8b8601562e78377875a2f87a8ad8e6') in 0.061595 seconds 
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000040 seconds.
+  path: Assets/Mobilier/textures/stone_rough.jpg
+  artifactKey: Guid(13d054dadebc3784ea66234332878d5d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/Mobilier/textures/stone_rough.jpg using Guid(13d054dadebc3784ea66234332878d5d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e3a1d59c2472c5b5ffaa3f6c92e20f17') in 0.053281 seconds 
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000053 seconds.
+  path: Assets/Mobilier/textures/Wood Floor_BaseColor.jpg
+  artifactKey: Guid(aeb815db5f4f4334e8a9d97ca53516b6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/Mobilier/textures/Wood Floor_BaseColor.jpg using Guid(aeb815db5f4f4334e8a9d97ca53516b6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a6420db451a838ba681974f3fa424fa5') in 0.110733 seconds 
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000142 seconds.
+  path: Assets/Mobilier/textures/plane__Normal 1.jpg
+  artifactKey: Guid(db095a0f7bb1ac248aa9c51ca83393bc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/Mobilier/textures/plane__Normal 1.jpg using Guid(db095a0f7bb1ac248aa9c51ca83393bc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '63a72c8eb93c97d76499821f18efb94e') in 0.066964 seconds 
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000096 seconds.
+  path: Assets/Mobilier/textures/walnut_normal 1.jpg
+  artifactKey: Guid(cb2770b3698337b408fb91f3d2ff7575) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/Mobilier/textures/walnut_normal 1.jpg using Guid(cb2770b3698337b408fb91f3d2ff7575) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1a79c495555bf9d7590970a1b03e3f0d') in 0.132366 seconds 
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000833 seconds.
+  path: Assets/Mobilier/textures/t_color.jpg
+  artifactKey: Guid(a9034e3b2e66164449e1515bef338785) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/Mobilier/textures/t_color.jpg using Guid(a9034e3b2e66164449e1515bef338785) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bbd93d47a7eadb934cdd481f0a4a37a9') in 0.130398 seconds 
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000121 seconds.
+  path: Assets/Mobilier/textures/masa_lateral_normal 1.jpg
+  artifactKey: Guid(5b0a0f83499e31646b69afaeb5dc0777) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/Mobilier/textures/masa_lateral_normal 1.jpg using Guid(5b0a0f83499e31646b69afaeb5dc0777) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e83fa08ea45a90995568a982d682c5b0') in 0.116135 seconds 
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000282 seconds.
+  path: Assets/Mobilier/textures/stone_diff.jpg
+  artifactKey: Guid(0da89411af09541458e87e79f37ef995) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/Mobilier/textures/stone_diff.jpg using Guid(0da89411af09541458e87e79f37ef995) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fcba49e1d3885e23c9e29f03a49993f5') in 0.129653 seconds 
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000080 seconds.
+  path: Assets/Mobilier/textures/stone_disp.jpg
+  artifactKey: Guid(83d2ee47f34b0414282411e9412b802d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/Mobilier/textures/stone_disp.jpg using Guid(83d2ee47f34b0414282411e9412b802d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '61926704057edf7e5423c30e4d4222ba') in 0.174697 seconds 
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000084 seconds.
+  path: Assets/Mobilier/textures/woodceiling_basecolor.png
+  artifactKey: Guid(4ba8370afd0a9eb4a859026998f0d278) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/Mobilier/textures/woodceiling_basecolor.png using Guid(4ba8370afd0a9eb4a859026998f0d278) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2d6b79d9d451bca55232505e1001c254') in 0.094408 seconds 
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000201 seconds.
+  path: Assets/Mobilier/textures/woodceiling_normal.png
+  artifactKey: Guid(3d601ead4c5452b4b8ff6b56415dff2c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/Mobilier/textures/woodceiling_normal.png using Guid(3d601ead4c5452b4b8ff6b56415dff2c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '779ba51f4ea614929a445a2425eec3b0') in 0.113056 seconds 
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000094 seconds.
+  path: Assets/Mobilier/textures/woodceiling_height.jpg
+  artifactKey: Guid(45e7ddd599ca5c04588f618d5962079b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/Mobilier/textures/woodceiling_height.jpg using Guid(45e7ddd599ca5c04588f618d5962079b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9e18d2a48779ed9c19e6c2531c6455a2') in 0.140032 seconds 
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000550 seconds.
+  path: Assets/Mobilier/textures/lemn_color.jpg
+  artifactKey: Guid(3977e7c479bf4964ab5333ff3a287262) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/Mobilier/textures/lemn_color.jpg using Guid(3977e7c479bf4964ab5333ff3a287262) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7ef3222ea49a03ae6f7445c73cd2f495') in 0.113643 seconds 
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000128 seconds.
+  path: Assets/Mobilier/textures/Wall_Normal 1.jpg
+  artifactKey: Guid(a6758e8df62e7c946924a4f8b3ebcb07) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/Mobilier/textures/Wall_Normal 1.jpg using Guid(a6758e8df62e7c946924a4f8b3ebcb07) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '46c6fdb7ec80a614e0d1de7c00047bb5') in 0.116968 seconds 
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000508 seconds.
+  path: Assets/Mobilier/textures/Wall_color.jpg
+  artifactKey: Guid(7cccd5f5fcb4e2d429e456ca71584fe8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/Mobilier/textures/Wall_color.jpg using Guid(7cccd5f5fcb4e2d429e456ca71584fe8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd89b0d25e5fbe75ea65167a04afa652b') in 0.115994 seconds 
+Number of asset objects unloaded after import = 2
+Editor requested this worker to shutdown with reason: Scaling down because of idle timeout
+AssetImportWorker is now disconnected from the server
+Process exiting
+Exiting without the bug reporter. Application will terminate with return code 0
