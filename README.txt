@@ -36,4 +36,7 @@ Lab 14:
 
 what we actually did (so far):
 Lab11:
--optimizare texturi fbx camera
+-optimizare texturi
+-creative mode (all recipes)
+-pagini cu retete (modelare)
+-UI start meniu
