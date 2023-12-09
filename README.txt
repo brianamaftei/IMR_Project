@@ -36,7 +36,7 @@ Lab 14:
 
 what we actually did (so far):
 Lab11:
--optimizare texturi
+-optimizare camera
 -creative mode (all recipes)
 -pagini cu retete (modelare)
 -UI start meniu
