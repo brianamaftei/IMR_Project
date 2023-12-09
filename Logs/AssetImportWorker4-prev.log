@@ -15,7 +15,7 @@ C:/Users/pinza/Documents/GitHub/IMR_Project
 -logFile
 Logs/AssetImportWorker4.log
 -srvPort
-50272
+53836
 Successfully changed project path to: C:/Users/pinza/Documents/GitHub/IMR_Project
 C:/Users/pinza/Documents/GitHub/IMR_Project
 [UnityMemory] Configuration Parameters - Can be set up in boot.config
@@ -47,12 +47,12 @@ C:/Users/pinza/Documents/GitHub/IMR_Project
     "memorysetup-temp-allocator-size-cloud-worker=32768"
     "memorysetup-temp-allocator-size-gi-baking-worker=262144"
     "memorysetup-temp-allocator-size-gfx=262144"
-Player connection [20468] Host "[IP] 192.168.56.1 [Port] 0 [Flags] 2 [Guid] 3264451165 [EditorId] 3264451165 [Version] 1048832 [Id] WindowsEditor(7,LAPTOP-42ANUGFD) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined multi-casting on [225.0.0.222:54997]...
+Player connection [1036] Host "[IP] 192.168.56.1 [Port] 0 [Flags] 2 [Guid] 261063546 [EditorId] 261063546 [Version] 1048832 [Id] WindowsEditor(7,LAPTOP-42ANUGFD) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined multi-casting on [225.0.0.222:54997]...
 
-Player connection [20468] Host "[IP] 192.168.56.1 [Port] 0 [Flags] 2 [Guid] 3264451165 [EditorId] 3264451165 [Version] 1048832 [Id] WindowsEditor(7,LAPTOP-42ANUGFD) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined alternative multi-casting on [225.0.0.222:34997]...
+Player connection [1036] Host "[IP] 192.168.56.1 [Port] 0 [Flags] 2 [Guid] 261063546 [EditorId] 261063546 [Version] 1048832 [Id] WindowsEditor(7,LAPTOP-42ANUGFD) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined alternative multi-casting on [225.0.0.222:34997]...
 
 [Physics::Module] Initialized MultithreadedJobDispatcher with {0} workers.
-Refreshing native plugins compatible for Editor in 152.52 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 101.39 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2021.3.31f1 (3409e2af086f)
 [Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2021.3.31f1/Editor/Data/Resources/UnitySubsystems
@@ -68,149 +68,791 @@ Initialize mono
 Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2021.3.31f1/Editor/Data/Managed'
 Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2021.3.31f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
 Mono config path = 'C:/Program Files/Unity/Hub/Editor/2021.3.31f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56132
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56672
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2021.3.31f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.011009 seconds.
+Registered in 0.006601 seconds.
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 200.78 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 75.58 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  3.329 seconds
+- Completed reload, in  0.799 seconds
 Domain Reload Profiling:
-	ReloadAssembly (3331ms)
-		BeginReloadAssembly (459ms)
+	ReloadAssembly (800ms)
+		BeginReloadAssembly (155ms)
 			ExecutionOrderSort (0ms)
 			DisableScriptedObjects (0ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (3ms)
-		EndReloadAssembly (2614ms)
-			LoadAssemblies (453ms)
+			CreateAndSetChildDomain (1ms)
+		EndReloadAssembly (511ms)
+			LoadAssemblies (153ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (421ms)
+			SetupTypeCache (115ms)
 			ReleaseScriptCaches (0ms)
-			RebuildScriptCaches (859ms)
-			SetupLoadedEditorAssemblies (1072ms)
+			RebuildScriptCaches (40ms)
+			SetupLoadedEditorAssemblies (310ms)
 				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (60ms)
-				SetLoadedEditorAssemblies (1ms)
-				RefreshPlugins (201ms)
-				BeforeProcessingInitializeOnLoad (7ms)
-				ProcessInitializeOnLoadAttributes (673ms)
-				ProcessInitializeOnLoadMethodAttributes (129ms)
+				InitializePlatformSupportModulesInManaged (10ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (76ms)
+				BeforeProcessingInitializeOnLoad (2ms)
+				ProcessInitializeOnLoadAttributes (166ms)
+				ProcessInitializeOnLoadMethodAttributes (57ms)
 				AfterProcessingInitializeOnLoad (0ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
 			AwakeInstancesAfterBackupRestoration (0ms)
 Platform modules already initialized, skipping
 Registering precompiled user dll's ...
-Registered in 0.010411 seconds.
+Registered in 0.004638 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 2.44 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 0.63 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Package Manager log level set to [2]
 [Package Manager] Server::EnsureServerProcessIsRunning -- launch failed, reason: Unity was launched with the -noUpm command-line argument
 [Package Manager] Cannot connect to Unity Package Manager local server
 Mono: successfully reloaded assembly
-- Completed reload, in  3.252 seconds
+- Completed reload, in  1.653 seconds
 Domain Reload Profiling:
-	ReloadAssembly (3254ms)
-		BeginReloadAssembly (403ms)
+	ReloadAssembly (1654ms)
+		BeginReloadAssembly (156ms)
 			ExecutionOrderSort (0ms)
-			DisableScriptedObjects (14ms)
+			DisableScriptedObjects (6ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (56ms)
-		EndReloadAssembly (2630ms)
-			LoadAssemblies (405ms)
+			CreateAndSetChildDomain (25ms)
+		EndReloadAssembly (1382ms)
+			LoadAssemblies (148ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (610ms)
+			SetupTypeCache (289ms)
 			ReleaseScriptCaches (1ms)
-			RebuildScriptCaches (225ms)
-			SetupLoadedEditorAssemblies (1357ms)
+			RebuildScriptCaches (61ms)
+			SetupLoadedEditorAssemblies (880ms)
 				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (14ms)
-				SetLoadedEditorAssemblies (1ms)
-				RefreshPlugins (3ms)
-				BeforeProcessingInitializeOnLoad (167ms)
-				ProcessInitializeOnLoadAttributes (1107ms)
-				ProcessInitializeOnLoadMethodAttributes (51ms)
-				AfterProcessingInitializeOnLoad (14ms)
+				InitializePlatformSupportModulesInManaged (7ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (93ms)
+				ProcessInitializeOnLoadAttributes (745ms)
+				ProcessInitializeOnLoadMethodAttributes (25ms)
+				AfterProcessingInitializeOnLoad (8ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
-			AwakeInstancesAfterBackupRestoration (13ms)
+			AwakeInstancesAfterBackupRestoration (8ms)
 Platform modules already initialized, skipping
 ========================================================================
 Worker process is ready to serve import requests
-Launched and connected shader compiler UnityShaderCompiler.exe after 0.23 seconds
-Refreshing native plugins compatible for Editor in 1.86 ms, found 3 plugins.
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.08 seconds
+Refreshing native plugins compatible for Editor in 0.67 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 3066 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 23 unused Assets / (46.8 KB). Loaded Objects now: 3525.
-Memory consumption went from 108.2 MB to 108.2 MB.
-Total: 9.813100 ms (FindLiveObjects: 0.908400 ms CreateObjectMapping: 0.557000 ms MarkObjects: 7.651300 ms  DeleteObjects: 0.692900 ms)
+Unloading 23 unused Assets / (46.3 KB). Loaded Objects now: 3528.
+Memory consumption went from 108.9 MB to 108.8 MB.
+Total: 3.583900 ms (FindLiveObjects: 0.360300 ms CreateObjectMapping: 0.149700 ms MarkObjects: 2.971700 ms  DeleteObjects: 0.099100 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
   custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
   custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
   custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:CustomObjectIndexerAttribute: bc11b3a6c3213fcdd17b65e7da85e133 -> 
   custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
   custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:SearchIndexIgnoredProperties: e643bd26f0fe6173181afceb89e7c659 -> 
   custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
   custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
   custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
 ========================================================================
 Received Import Request.
-  Time since last request: 188970.749184 seconds.
-  path: Assets/uploads_files_1988927_wineglass_plain.fbx
-  artifactKey: Guid(6b3e2c96b56e1654d86ff96bff472977) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+  Time since last request: 206376.274392 seconds.
+  path: Assets/ingrediente + pahare/models/IceCube.fbx
+  artifactKey: Guid(8391836c41c3b544a8e46295bb20fc4c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
 Number of updated assets reloaded before import = 0
-Start importing Assets/uploads_files_1988927_wineglass_plain.fbx using Guid(6b3e2c96b56e1654d86ff96bff472977) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '788fdf0797326d1dffc43f2854b83006') in 1.453722 seconds 
-Number of asset objects unloaded after import = 7
+Start importing Assets/ingrediente + pahare/models/IceCube.fbx using Guid(8391836c41c3b544a8e46295bb20fc4c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '43a2053c09a19f2897eecfb1a5e818cc') in 0.243978 seconds 
+Number of asset objects unloaded after import = 17
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000123 seconds.
-  path: Assets/green-old-wood-background_64049-276.png
-  artifactKey: Guid(e8654f23752bf174787e1ab11427a671) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+  Time since last request: 2.182955 seconds.
+  path: Assets/ingrediente + pahare/models/WhiteRum.fbx
+  artifactKey: Guid(76413ff6a98032740ae7c0dfcae20bef) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
 Number of updated assets reloaded before import = 0
-Start importing Assets/green-old-wood-background_64049-276.png using Guid(e8654f23752bf174787e1ab11427a671) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'de561159c091a90605a9c1d87befbbc3') in 0.182239 seconds 
+Start importing Assets/ingrediente + pahare/models/WhiteRum.fbx using Guid(76413ff6a98032740ae7c0dfcae20bef) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6e56f0d57de61a5a790812ce7024b7f8') in 0.137793 seconds 
+Number of asset objects unloaded after import = 27
+========================================================================
+Received Import Request.
+  Time since last request: 928.214467 seconds.
+  path: Assets/ingrediente + pahare/pahare modele
+  artifactKey: Guid(dbfff3ca494102a4697ed90bb645a896) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/ingrediente + pahare/pahare modele using Guid(dbfff3ca494102a4697ed90bb645a896) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f32ff656148a330ffc7eb1e7c360772b') in 0.021910 seconds 
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 0.747827 seconds.
+  path: Assets/ingrediente + pahare/models
+  artifactKey: Guid(d32b5248a3ec00946aa9fb2962d5eed2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/ingrediente + pahare/models using Guid(d32b5248a3ec00946aa9fb2962d5eed2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3ed00d697ff373a43ff636b38548c8d1') in 0.013470 seconds 
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 19.368370 seconds.
+  path: Assets/Mobilier/materials/Fluffy Velvet.mat
+  artifactKey: Guid(b17a68876b8facd4e8293bd3087e92d4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/Mobilier/materials/Fluffy Velvet.mat using Guid(b17a68876b8facd4e8293bd3087e92d4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9c9e28831e54ba784d4955ed5e68efd4') in 0.034879 seconds 
 Number of asset objects unloaded after import = 2
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000160 seconds.
-  path: Assets/uploads_files_1988927_wineglass_plain.prefab
-  artifactKey: Guid(314d7ed5d59dd2d49861140ff927caa0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+  Time since last request: 800.236617 seconds.
+  path: Assets/Mobilier/texturi_mobilier/Wood Floor DarkBrown Parquet Square Basket Floor_BaseColor.jpg
+  artifactKey: Guid(3b0e4e3faf1341640a206de27ecd1b79) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
 Number of updated assets reloaded before import = 0
-Start importing Assets/uploads_files_1988927_wineglass_plain.prefab using Guid(314d7ed5d59dd2d49861140ff927caa0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a42b278e4f01a73946777b10f1a1ce93') in 0.067416 seconds 
-Number of asset objects unloaded after import = 7
-========================================================================
-Received Import Request.
-  Time since last request: 0.000097 seconds.
-  path: Assets/medieval_blocks_03_nor_gl_4k.exr
-  artifactKey: Guid(a9ae9a73dc5589247b0e9d3bad723968) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Number of updated assets reloaded before import = 0
-Start importing Assets/medieval_blocks_03_nor_gl_4k.exr using Guid(a9ae9a73dc5589247b0e9d3bad723968) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f154b427418bb893c8b1b179b7af8530') in 0.164420 seconds 
+Start importing Assets/Mobilier/texturi_mobilier/Wood Floor DarkBrown Parquet Square Basket Floor_BaseColor.jpg using Guid(3b0e4e3faf1341640a206de27ecd1b79) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9253ed1cc9c65ffe3b0becae0eedc80c') in 0.070359 seconds 
 Number of asset objects unloaded after import = 2
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000156 seconds.
-  path: Assets/uploads_files_2732038_Jack+Daniel+Bottle.fbx
-  artifactKey: Guid(1d18d3237bfef514ab504ea052cf0697) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+  Time since last request: 0.000039 seconds.
+  path: Assets/Mobilier/texturi_mobilier/Wood Floor DarkBrown Parquet Square Basket Floor_Roughness.jpg
+  artifactKey: Guid(eae3bc047110a1248b9f647b2ff3de42) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
 Number of updated assets reloaded before import = 0
-Start importing Assets/uploads_files_2732038_Jack+Daniel+Bottle.fbx using Guid(1d18d3237bfef514ab504ea052cf0697) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9829e63acc42d2942d515b1e0cbf9a0c') in 0.556166 seconds 
-Number of asset objects unloaded after import = 41
+Start importing Assets/Mobilier/texturi_mobilier/Wood Floor DarkBrown Parquet Square Basket Floor_Roughness.jpg using Guid(eae3bc047110a1248b9f647b2ff3de42) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6e98102446a6743e9d5699a1dddcbe2d') in 0.030864 seconds 
+Number of asset objects unloaded after import = 2
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000099 seconds.
-  path: Assets/female1.fbx
-  artifactKey: Guid(97e585210a4387b4eaf8b5a5c5584aca) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+  Time since last request: 0.000053 seconds.
+  path: Assets/Mobilier/texturi_mobilier/Wood Floor DarkBrown Parquet Square Basket Floor_Normal.jpg
+  artifactKey: Guid(6e033eeccc7437243a76f6af5d6e20f8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
 Number of updated assets reloaded before import = 0
-Start importing Assets/female1.fbx using Guid(97e585210a4387b4eaf8b5a5c5584aca) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b69f3e0c0a690d4b69771316f6031aed') in 0.213334 seconds 
+Start importing Assets/Mobilier/texturi_mobilier/Wood Floor DarkBrown Parquet Square Basket Floor_Normal.jpg using Guid(6e033eeccc7437243a76f6af5d6e20f8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b3fe92fc77dbc8d041b47c740ef20469') in 0.034100 seconds 
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 14.984721 seconds.
+  path: Assets/Mobilier/texturi_mobilier/Wood Floor DarkBrown Parquet Square Basket Floor_Normal.jpg
+  artifactKey: Guid(6e033eeccc7437243a76f6af5d6e20f8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/Mobilier/texturi_mobilier/Wood Floor DarkBrown Parquet Square Basket Floor_Normal.jpg using Guid(6e033eeccc7437243a76f6af5d6e20f8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7b78f9566cf822a5927d5a42cab36400') in 0.032481 seconds 
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 758.071154 seconds.
+  path: Assets/Lights
+  artifactKey: Guid(66d494e01b0a74149a8ccc0fd5e558fe) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/Lights using Guid(66d494e01b0a74149a8ccc0fd5e558fe) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '595f4740927ff2db48a2ab3e73cd33cf') in 0.013369 seconds 
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 6.443774 seconds.
+  path: Assets/Lights/Spot Light.prefab
+  artifactKey: Guid(e88271b9414ab6640821973213502fff) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/Lights/Spot Light.prefab using Guid(e88271b9414ab6640821973213502fff) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '360b46b4d73b65788e485a00c37c9124') in 0.017268 seconds 
+Number of asset objects unloaded after import = 5
+========================================================================
+Received Import Request.
+  Time since last request: 12.647331 seconds.
+  path: Assets/Lights/lumina_lustra_bar.prefab
+  artifactKey: Guid(e88271b9414ab6640821973213502fff) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/Lights/lumina_lustra_bar.prefab using Guid(e88271b9414ab6640821973213502fff) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '752228d56b0bf74998b7f8d516812b6a') in 0.015113 seconds 
+Number of asset objects unloaded after import = 5
+========================================================================
+Received Import Request.
+  Time since last request: 21.794111 seconds.
+  path: Assets/Lights/lumina_lustra_bar.prefab
+  artifactKey: Guid(e88271b9414ab6640821973213502fff) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/Lights/lumina_lustra_bar.prefab using Guid(e88271b9414ab6640821973213502fff) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f27ae8ccf5453b6f79538cdd54e5b5d2') in 0.005798 seconds 
+Number of asset objects unloaded after import = 5
+========================================================================
+Received Import Request.
+  Time since last request: 1.406814 seconds.
+  path: Assets/Lights/lumina_lustra_bar.prefab
+  artifactKey: Guid(e88271b9414ab6640821973213502fff) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/Lights/lumina_lustra_bar.prefab using Guid(e88271b9414ab6640821973213502fff) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'db7115eaa75f6eb6d462ea1898723b3b') in 0.006743 seconds 
+Number of asset objects unloaded after import = 5
+========================================================================
+Received Import Request.
+  Time since last request: 1.005715 seconds.
+  path: Assets/Lights/lumina_lustra_bar.prefab
+  artifactKey: Guid(e88271b9414ab6640821973213502fff) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/Lights/lumina_lustra_bar.prefab using Guid(e88271b9414ab6640821973213502fff) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd1cc7ceade39cca8187999c96ee69fdb') in 0.006563 seconds 
+Number of asset objects unloaded after import = 5
+========================================================================
+Received Import Request.
+  Time since last request: 3.028274 seconds.
+  path: Assets/Lights/lumina_lustra_bar.prefab
+  artifactKey: Guid(e88271b9414ab6640821973213502fff) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/Lights/lumina_lustra_bar.prefab using Guid(e88271b9414ab6640821973213502fff) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '923d8a79d7a9845d5d990cff37aff104') in 0.009187 seconds 
+Number of asset objects unloaded after import = 5
+========================================================================
+Received Import Request.
+  Time since last request: 1.399837 seconds.
+  path: Assets/Lights/lumina_lustra_bar.prefab
+  artifactKey: Guid(e88271b9414ab6640821973213502fff) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/Lights/lumina_lustra_bar.prefab using Guid(e88271b9414ab6640821973213502fff) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b16e67e3c1c8716f4c4a56dee159c713') in 0.008612 seconds 
+Number of asset objects unloaded after import = 5
+========================================================================
+Received Import Request.
+  Time since last request: 1.204015 seconds.
+  path: Assets/Lights/lumina_lustra_bar.prefab
+  artifactKey: Guid(e88271b9414ab6640821973213502fff) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/Lights/lumina_lustra_bar.prefab using Guid(e88271b9414ab6640821973213502fff) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b8782e49f17bee74c09be04dd742f583') in 0.008834 seconds 
+Number of asset objects unloaded after import = 5
+========================================================================
+Received Import Request.
+  Time since last request: 1.656004 seconds.
+  path: Assets/Lights/lumina_lustra_bar.prefab
+  artifactKey: Guid(e88271b9414ab6640821973213502fff) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/Lights/lumina_lustra_bar.prefab using Guid(e88271b9414ab6640821973213502fff) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b8525c885a068eb2a3ccc1d95e6ca1e6') in 0.008742 seconds 
+Number of asset objects unloaded after import = 5
+========================================================================
+Received Import Request.
+  Time since last request: 1.630035 seconds.
+  path: Assets/Lights/lumina_lustra_bar.prefab
+  artifactKey: Guid(e88271b9414ab6640821973213502fff) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/Lights/lumina_lustra_bar.prefab using Guid(e88271b9414ab6640821973213502fff) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '19a6fa04fa8942f0f31eb23d279202e8') in 0.006401 seconds 
+Number of asset objects unloaded after import = 5
+========================================================================
+Received Import Request.
+  Time since last request: 1.621018 seconds.
+  path: Assets/Lights/lumina_lustra_bar.prefab
+  artifactKey: Guid(e88271b9414ab6640821973213502fff) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/Lights/lumina_lustra_bar.prefab using Guid(e88271b9414ab6640821973213502fff) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8d8e1cebb0328af8d22fe758fcfe2447') in 0.006907 seconds 
+Number of asset objects unloaded after import = 5
+========================================================================
+Received Import Request.
+  Time since last request: 2.219922 seconds.
+  path: Assets/Lights/lumina_lustra_bar.prefab
+  artifactKey: Guid(e88271b9414ab6640821973213502fff) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/Lights/lumina_lustra_bar.prefab using Guid(e88271b9414ab6640821973213502fff) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c4bb726992576a4746b88118b2dd60ab') in 0.006271 seconds 
+Number of asset objects unloaded after import = 5
+========================================================================
+Received Import Request.
+  Time since last request: 1.209193 seconds.
+  path: Assets/Lights/lumina_lustra_bar.prefab
+  artifactKey: Guid(e88271b9414ab6640821973213502fff) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/Lights/lumina_lustra_bar.prefab using Guid(e88271b9414ab6640821973213502fff) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3e058aaba35e8eead2881d60e73e5d9b') in 0.006786 seconds 
+Number of asset objects unloaded after import = 5
+========================================================================
+Received Import Request.
+  Time since last request: 208.887366 seconds.
+  path: Assets/Lights/lumina_lustra_bar.prefab
+  artifactKey: Guid(e88271b9414ab6640821973213502fff) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/Lights/lumina_lustra_bar.prefab using Guid(e88271b9414ab6640821973213502fff) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2c6ab4fa42a4ff0b8f45a85b1b4c3f35') in 0.009269 seconds 
+Number of asset objects unloaded after import = 5
+========================================================================
+Received Import Request.
+  Time since last request: 4.223802 seconds.
+  path: Assets/Lights/lumina_lustra_bar.prefab
+  artifactKey: Guid(e88271b9414ab6640821973213502fff) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/Lights/lumina_lustra_bar.prefab using Guid(e88271b9414ab6640821973213502fff) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '64521e8959f3982c8070ec0015d74916') in 0.009245 seconds 
+Number of asset objects unloaded after import = 5
+========================================================================
+Received Import Request.
+  Time since last request: 151.831306 seconds.
+  path: Assets/Lights/lumina_lustra_bar.prefab
+  artifactKey: Guid(e88271b9414ab6640821973213502fff) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/Lights/lumina_lustra_bar.prefab using Guid(e88271b9414ab6640821973213502fff) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8e98b937f592c4dd870649b61019f164') in 0.012066 seconds 
+Number of asset objects unloaded after import = 5
+========================================================================
+Received Import Request.
+  Time since last request: 4.321261 seconds.
+  path: Assets/Lights/lumina_lustra_bar.prefab
+  artifactKey: Guid(e88271b9414ab6640821973213502fff) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/Lights/lumina_lustra_bar.prefab using Guid(e88271b9414ab6640821973213502fff) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '078cddaa59225111f268d44e6b1c535d') in 0.005982 seconds 
+Number of asset objects unloaded after import = 5
+========================================================================
+Received Import Request.
+  Time since last request: 284.666588 seconds.
+  path: Assets/ingrediente + pahare/models/Bottiglia 15.mat
+  artifactKey: Guid(8d0bf3df56844aa46802255b3173d8eb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/ingrediente + pahare/models/Bottiglia 15.mat using Guid(8d0bf3df56844aa46802255b3173d8eb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8c18e34ad4179d9470619b468d60c7f4') in 0.149815 seconds 
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 53.756654 seconds.
+  path: Assets/ingrediente + pahare/models/Campari.fbx
+  artifactKey: Guid(c96be0103c1c9ba49b61bba54275c715) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/ingrediente + pahare/models/Campari.fbx using Guid(c96be0103c1c9ba49b61bba54275c715) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c40f4400dee268170e89d066346922d5') in 0.102929 seconds 
+Number of asset objects unloaded after import = 60
+========================================================================
+Received Import Request.
+  Time since last request: 3.472678 seconds.
+  path: Assets/Bauturi/material_sticla_pahare.mat
+  artifactKey: Guid(0c693f9582bb8fb418feb0af489ffa04) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/Bauturi/material_sticla_pahare.mat using Guid(0c693f9582bb8fb418feb0af489ffa04) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd3333c7215c6902a4586a1095dc12f07') in 0.032218 seconds 
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 7.409691 seconds.
+  path: Assets/Mobilier/materials/Bronze metal.mat
+  artifactKey: Guid(a1dbc4b4c8fc8c44ba35388577c78259) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/Mobilier/materials/Bronze metal.mat using Guid(a1dbc4b4c8fc8c44ba35388577c78259) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '89e43e81c3989b57b1ee78ebc0629110') in 0.184814 seconds 
+Number of asset objects unloaded after import = 4
+========================================================================
+Received Import Request.
+  Time since last request: 0.000108 seconds.
+  path: Assets/Mobilier/materials/Wood Floor DarkBrown Parquet Floor.mat
+  artifactKey: Guid(e286b97b65735794ea1494bb19cf2217) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/Mobilier/materials/Wood Floor DarkBrown Parquet Floor.mat using Guid(e286b97b65735794ea1494bb19cf2217) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '844455ab822b1a4227ae367ec0ace613') in 0.096953 seconds 
+Number of asset objects unloaded after import = 5
+========================================================================
+Received Import Request.
+  Time since last request: 0.000079 seconds.
+  path: Assets/Mobilier/materials/Stucco wall.001.mat
+  artifactKey: Guid(84650bef1483c4245847f8956d9e30c7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/Mobilier/materials/Stucco wall.001.mat using Guid(84650bef1483c4245847f8956d9e30c7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9a7a3179eae87038cdffcf2a7319b6dd') in 0.126573 seconds 
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000060 seconds.
+  path: Assets/Mobilier/materials/masuta.mat
+  artifactKey: Guid(745bc0677e48c7545a0561c95061604f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/Mobilier/materials/masuta.mat using Guid(745bc0677e48c7545a0561c95061604f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3aabf8ee52799ae2224f71dcc275f51f') in 0.104451 seconds 
+Number of asset objects unloaded after import = 4
+========================================================================
+Received Import Request.
+  Time since last request: 0.000054 seconds.
+  path: Assets/Mobilier/materials/Walnut fine wood PBR texture seamless.mat
+  artifactKey: Guid(89ce9d9e12051524d80ce6d22256420e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/Mobilier/materials/Walnut fine wood PBR texture seamless.mat using Guid(89ce9d9e12051524d80ce6d22256420e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1fc8b6ea25f85967786b9de4985e574a') in 0.110686 seconds 
+Number of asset objects unloaded after import = 4
+========================================================================
+Received Import Request.
+  Time since last request: 0.000072 seconds.
+  path: Assets/Mobilier/materials/Decorative Wood Ceiling.mat
+  artifactKey: Guid(7bee4a9840e8e014aa8005ba2b2f8fa4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/Mobilier/materials/Decorative Wood Ceiling.mat using Guid(7bee4a9840e8e014aa8005ba2b2f8fa4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8420e4c9e742899cc3fa91d248326af7') in 0.109230 seconds 
+Number of asset objects unloaded after import = 6
+========================================================================
+Received Import Request.
+  Time since last request: 0.000046 seconds.
+  path: Assets/Mobilier/materials/stone_wall_02.mat
+  artifactKey: Guid(d8a066b459397a8448c18b508a18b045) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/Mobilier/materials/stone_wall_02.mat using Guid(d8a066b459397a8448c18b508a18b045) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fc2795b29d55162010e2276f55914d2f') in 0.082960 seconds 
+Number of asset objects unloaded after import = 4
+========================================================================
+Received Import Request.
+  Time since last request: 0.000046 seconds.
+  path: Assets/Mobilier/materials/colt podea.mat
+  artifactKey: Guid(7e6cc12da461076468e03d3a3c53ebbb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/Mobilier/materials/colt podea.mat using Guid(7e6cc12da461076468e03d3a3c53ebbb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c4b0d57624ab30250c6bdfb3f96d7bdd') in 0.045817 seconds 
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000034 seconds.
+  path: Assets/ingrediente + pahare/prefabs/VermouthRed.prefab
+  artifactKey: Guid(5bbbf0d5275e8df4d9d387a1e4642197) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/ingrediente + pahare/prefabs/VermouthRed.prefab using Guid(5bbbf0d5275e8df4d9d387a1e4642197) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd8a009425bc6d9f06cf5f1691d2771bf') in 0.112055 seconds 
 Number of asset objects unloaded after import = 35
+========================================================================
+Received Import Request.
+  Time since last request: 0.000107 seconds.
+  path: Assets/ingrediente + pahare/prefabs/pahar3 (6).prefab
+  artifactKey: Guid(79834eee7e219fa459276950e1849bae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/ingrediente + pahare/prefabs/pahar3 (6).prefab using Guid(79834eee7e219fa459276950e1849bae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c31ec7d5c7c812db0c66d400a8d20719') in 0.112821 seconds 
+Number of asset objects unloaded after import = 8
+========================================================================
+Received Import Request.
+  Time since last request: 0.000054 seconds.
+  path: Assets/ingrediente + pahare/prefabs/Rum.prefab
+  artifactKey: Guid(2d859495c383eb54e913854481825274) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/ingrediente + pahare/prefabs/Rum.prefab using Guid(2d859495c383eb54e913854481825274) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '04582e87112c264019583b3ee8823d9b') in 0.141074 seconds 
+Number of asset objects unloaded after import = 27
+========================================================================
+Received Import Request.
+  Time since last request: 0.000053 seconds.
+  path: Assets/ingrediente + pahare/prefabs/SourMix.prefab
+  artifactKey: Guid(e0ab8b9eb0f6eff4ea12387ef8fa349e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/ingrediente + pahare/prefabs/SourMix.prefab using Guid(e0ab8b9eb0f6eff4ea12387ef8fa349e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fd520a715426b2f7f7bf1327d725c502') in 0.072572 seconds 
+Number of asset objects unloaded after import = 28
+========================================================================
+Received Import Request.
+  Time since last request: 0.000157 seconds.
+  path: Assets/ingrediente + pahare/prefabs/pahar1 (30).prefab
+  artifactKey: Guid(4c3815ca2271ebe408951dfde26bdb8d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/ingrediente + pahare/prefabs/pahar1 (30).prefab using Guid(4c3815ca2271ebe408951dfde26bdb8d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'dfcac8beed637826ffb41ca2950ab628') in 0.135067 seconds 
+Number of asset objects unloaded after import = 8
+========================================================================
+Received Import Request.
+  Time since last request: 0.000058 seconds.
+  path: Assets/ingrediente + pahare/prefabs/TripleSec.prefab
+  artifactKey: Guid(683d27c52463c674fa4f56a7d9a39aad) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/ingrediente + pahare/prefabs/TripleSec.prefab using Guid(683d27c52463c674fa4f56a7d9a39aad) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e24ac9e81856b590a35a7dbe3d3dbbaa') in 0.130314 seconds 
+Number of asset objects unloaded after import = 28
+========================================================================
+Received Import Request.
+  Time since last request: 0.000073 seconds.
+  path: Assets/ingrediente + pahare/prefabs/Gin.prefab
+  artifactKey: Guid(7a7c7da6788900f4d8a2e029334b57c8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/ingrediente + pahare/prefabs/Gin.prefab using Guid(7a7c7da6788900f4d8a2e029334b57c8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cb4bb13c343923e7cfeba696629b1e79') in 0.106167 seconds 
+Number of asset objects unloaded after import = 31
+========================================================================
+Received Import Request.
+  Time since last request: 0.000066 seconds.
+  path: Assets/ingrediente + pahare/prefabs/pahar1 (6).prefab
+  artifactKey: Guid(724dfc43770002c429ad71f7247793c0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/ingrediente + pahare/prefabs/pahar1 (6).prefab using Guid(724dfc43770002c429ad71f7247793c0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a05a72a7c1563199ddb6ad45c7d5e89e') in 0.079293 seconds 
+Number of asset objects unloaded after import = 8
+========================================================================
+Received Import Request.
+  Time since last request: 0.000057 seconds.
+  path: Assets/ingrediente + pahare/prefabs/Grenadine.prefab
+  artifactKey: Guid(e8999297dca8505448aebf1c6e25efc7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/ingrediente + pahare/prefabs/Grenadine.prefab using Guid(e8999297dca8505448aebf1c6e25efc7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ba92e23bf2710b8c386c09461a4d5bdb') in 0.076433 seconds 
+Number of asset objects unloaded after import = 27
+========================================================================
+Received Import Request.
+  Time since last request: 0.000073 seconds.
+  path: Assets/Mobilier/materials/Fluffy Velvet.003.mat
+  artifactKey: Guid(6017282e0ba97da488b107dda34a623d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/Mobilier/materials/Fluffy Velvet.003.mat using Guid(6017282e0ba97da488b107dda34a623d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e7e3c75e50b2e0a15cf7305146031788') in 0.080447 seconds 
+Number of asset objects unloaded after import = 4
+========================================================================
+Received Import Request.
+  Time since last request: 0.000084 seconds.
+  path: Assets/Mobilier/materials/fot_2.mat
+  artifactKey: Guid(c310f16c87cc19c45a1dfa2b68caf7aa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/Mobilier/materials/fot_2.mat using Guid(c310f16c87cc19c45a1dfa2b68caf7aa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b34678a65b50cb8402ac1202a16288e2') in 0.103834 seconds 
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000080 seconds.
+  path: Assets/ingrediente + pahare/prefabs/TequilaSilver.prefab
+  artifactKey: Guid(b1536b5997117df4691c74feceb94c8a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/ingrediente + pahare/prefabs/TequilaSilver.prefab using Guid(b1536b5997117df4691c74feceb94c8a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2514a8ba1bd42d3a3e9bb5e0152f64be') in 0.120190 seconds 
+Number of asset objects unloaded after import = 28
+========================================================================
+Received Import Request.
+  Time since last request: 0.000060 seconds.
+  path: Assets/ingrediente + pahare/prefabs/TonicWater.prefab
+  artifactKey: Guid(2b12ee7736c43eb46bc98f94126fbd13) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/ingrediente + pahare/prefabs/TonicWater.prefab using Guid(2b12ee7736c43eb46bc98f94126fbd13) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3d12f79aae56e5c3566365e34b325908') in 0.087643 seconds 
+Number of asset objects unloaded after import = 28
+========================================================================
+Received Import Request.
+  Time since last request: 0.000092 seconds.
+  path: Assets/Mobilier/materials/fluff.mat
+  artifactKey: Guid(c0d373bc3c0a12e42918eceb52912e5f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/Mobilier/materials/fluff.mat using Guid(c0d373bc3c0a12e42918eceb52912e5f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0d1faacb74d77284450d2b6a8bfdcbee') in 0.148553 seconds 
+Number of asset objects unloaded after import = 4
+========================================================================
+Received Import Request.
+  Time since last request: 0.000164 seconds.
+  path: Assets/ingrediente + pahare/prefabs/Champagne.prefab
+  artifactKey: Guid(639cb111cf0f39c4abbcc4e0d4e3a101) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/ingrediente + pahare/prefabs/Champagne.prefab using Guid(639cb111cf0f39c4abbcc4e0d4e3a101) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a99732f320c2fe897b0d183bc71ba894') in 0.098588 seconds 
+Number of asset objects unloaded after import = 29
+========================================================================
+Received Import Request.
+  Time since last request: 0.000046 seconds.
+  path: Assets/Mobilier/materials/Dark oak fine wood texture.mat
+  artifactKey: Guid(01df8b6e2e8f3e44fa6c9aa20549913b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/Mobilier/materials/Dark oak fine wood texture.mat using Guid(01df8b6e2e8f3e44fa6c9aa20549913b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '87bd6c98f70e77c7cd7f3090216ea15c') in 0.082111 seconds 
+Number of asset objects unloaded after import = 4
+========================================================================
+Received Import Request.
+  Time since last request: 22.475995 seconds.
+  path: Assets/ingrediente + pahare/models/Tabasco.fbx
+  artifactKey: Guid(3e005e04ad50e1340b6f6c02cc10bda7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/ingrediente + pahare/models/Tabasco.fbx using Guid(3e005e04ad50e1340b6f6c02cc10bda7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '12199d0964f7c2b4e51e17d09c49f63d') in 0.088200 seconds 
+Number of asset objects unloaded after import = 53
+========================================================================
+Received Import Request.
+  Time since last request: 21.391780 seconds.
+  path: Assets/ingrediente + pahare/models/TonicWater.fbx
+  artifactKey: Guid(2c940997f7cfc274e9c08e8306ccfe8b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/ingrediente + pahare/models/TonicWater.fbx using Guid(2c940997f7cfc274e9c08e8306ccfe8b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6da805f8516ab8da77f7b805872c713b') in 0.095356 seconds 
+Number of asset objects unloaded after import = 53
+========================================================================
+Received Import Request.
+  Time since last request: 10.622269 seconds.
+  path: Assets/ingrediente + pahare/models/Whiskey2.fbx
+  artifactKey: Guid(ba83e10c41ad01942bf3de0f0f97a0d1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/ingrediente + pahare/models/Whiskey2.fbx using Guid(ba83e10c41ad01942bf3de0f0f97a0d1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2f9b3f888334b12d824ac307c878890d') in 0.113977 seconds 
+Number of asset objects unloaded after import = 54
+========================================================================
+Received Import Request.
+  Time since last request: 12.807342 seconds.
+  path: Assets/ingrediente + pahare/models/Tequila.fbx
+  artifactKey: Guid(0e7e257b6204e5142a062894e96efe7b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/ingrediente + pahare/models/Tequila.fbx using Guid(0e7e257b6204e5142a062894e96efe7b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'de5a85a191208ebafc6ab9f58928c413') in 0.116922 seconds 
+Number of asset objects unloaded after import = 26
+========================================================================
+Received Import Request.
+  Time since last request: 11.131313 seconds.
+  path: Assets/ingrediente + pahare/models/TripleSec.fbx
+  artifactKey: Guid(ca06b098820671c4286816e765badc03) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/ingrediente + pahare/models/TripleSec.fbx using Guid(ca06b098820671c4286816e765badc03) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9a9cc6df2110718fed86b25c32ff6750') in 0.109895 seconds 
+Number of asset objects unloaded after import = 29
+========================================================================
+Received Import Request.
+  Time since last request: 28.970305 seconds.
+  path: Assets/ingrediente + pahare/models/Coca-Cola.fbx
+  artifactKey: Guid(2f7f74bcd487e304992b4307ea3fa0a6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/ingrediente + pahare/models/Coca-Cola.fbx using Guid(2f7f74bcd487e304992b4307ea3fa0a6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e036c5ec2eb4fd1310edc3b7185a08d7') in 0.085556 seconds 
+Number of asset objects unloaded after import = 36
+========================================================================
+Received Import Request.
+  Time since last request: 9.620632 seconds.
+  path: Assets/ingrediente + pahare/models/Champagne.fbx
+  artifactKey: Guid(457e787db6a2a5d4997f23df6a055ee5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/ingrediente + pahare/models/Champagne.fbx using Guid(457e787db6a2a5d4997f23df6a055ee5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b53c65b349b822b9d528aff02b8b65df') in 0.090694 seconds 
+Number of asset objects unloaded after import = 30
+========================================================================
+Received Import Request.
+  Time since last request: 7.240879 seconds.
+  path: Assets/ingrediente + pahare/models/Gin.fbx
+  artifactKey: Guid(99c633b38bd718e4c887b06f6570304a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/ingrediente + pahare/models/Gin.fbx using Guid(99c633b38bd718e4c887b06f6570304a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '50b12d9ffe67498ad6f039ce8675de0d') in 0.097519 seconds 
+Number of asset objects unloaded after import = 38
+========================================================================
+Received Import Request.
+  Time since last request: 8.663313 seconds.
+  path: Assets/ingrediente + pahare/models/MelonLiqor.fbx
+  artifactKey: Guid(c40cbcfc932635645923130d7af3c2a3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/ingrediente + pahare/models/MelonLiqor.fbx using Guid(c40cbcfc932635645923130d7af3c2a3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4ecf3f28b9d4ba4125aca235586ad4c7') in 0.093779 seconds 
+Number of asset objects unloaded after import = 28
+========================================================================
+Received Import Request.
+  Time since last request: 9.354962 seconds.
+  path: Assets/ingrediente + pahare/models/PeachSchnapps.fbx
+  artifactKey: Guid(38ec6b864cd2a14468c1f62c3b33705b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/ingrediente + pahare/models/PeachSchnapps.fbx using Guid(38ec6b864cd2a14468c1f62c3b33705b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '52409732ab66eb873911275757d8ad2f') in 0.094598 seconds 
+Number of asset objects unloaded after import = 28
+========================================================================
+Received Import Request.
+  Time since last request: 16.769891 seconds.
+  path: Assets/ingrediente + pahare/models/Grenadine.fbx
+  artifactKey: Guid(01f3647934e1e2949b4cbf199c593335) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/ingrediente + pahare/models/Grenadine.fbx using Guid(01f3647934e1e2949b4cbf199c593335) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c778fbc17cec4889ebaa8d3c1d9bfd8d') in 0.110869 seconds 
+Number of asset objects unloaded after import = 28
+========================================================================
+Received Import Request.
+  Time since last request: 10.791028 seconds.
+  path: Assets/ingrediente + pahare/models/Rum.fbx
+  artifactKey: Guid(65bdd7ede24bca04b997be0d359e1b21) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/ingrediente + pahare/models/Rum.fbx using Guid(65bdd7ede24bca04b997be0d359e1b21) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '31a4fb446842914a6397ad6eec5128fc') in 0.106704 seconds 
+Number of asset objects unloaded after import = 28
+========================================================================
+Received Import Request.
+  Time since last request: 13.334950 seconds.
+  path: Assets/ingrediente + pahare/prefabs/Champagne.prefab
+  artifactKey: Guid(639cb111cf0f39c4abbcc4e0d4e3a101) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/ingrediente + pahare/prefabs/Champagne.prefab using Guid(639cb111cf0f39c4abbcc4e0d4e3a101) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ff6306bf0e9a5daef4d8ce19f88c8af1') in 0.051050 seconds 
+Number of asset objects unloaded after import = 29
+========================================================================
+Received Import Request.
+  Time since last request: 0.005452 seconds.
+  path: Assets/ingrediente + pahare/prefabs/Rum.prefab
+  artifactKey: Guid(2d859495c383eb54e913854481825274) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/ingrediente + pahare/prefabs/Rum.prefab using Guid(2d859495c383eb54e913854481825274) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3706047b184fe04cb1bed85d6a605497') in 0.083297 seconds 
+Number of asset objects unloaded after import = 27
+========================================================================
+Received Import Request.
+  Time since last request: 0.000057 seconds.
+  path: Assets/ingrediente + pahare/prefabs/TripleSec.prefab
+  artifactKey: Guid(683d27c52463c674fa4f56a7d9a39aad) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/ingrediente + pahare/prefabs/TripleSec.prefab using Guid(683d27c52463c674fa4f56a7d9a39aad) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e4377639f5423e468eb8c37378e187b8') in 0.055008 seconds 
+Number of asset objects unloaded after import = 28
+========================================================================
+Received Import Request.
+  Time since last request: 0.000066 seconds.
+  path: Assets/ingrediente + pahare/prefabs/Gin.prefab
+  artifactKey: Guid(7a7c7da6788900f4d8a2e029334b57c8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/ingrediente + pahare/prefabs/Gin.prefab using Guid(7a7c7da6788900f4d8a2e029334b57c8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4488fb4e60b04017a808ec395f2de1fc') in 0.055818 seconds 
+Number of asset objects unloaded after import = 31
+========================================================================
+Received Import Request.
+  Time since last request: 0.000095 seconds.
+  path: Assets/ingrediente + pahare/prefabs/PeachSchnapps.prefab
+  artifactKey: Guid(716a9da3e7648e6489096ec06886e71a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/ingrediente + pahare/prefabs/PeachSchnapps.prefab using Guid(716a9da3e7648e6489096ec06886e71a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8a4b1b65f051d3a018d0a7190ab2fde9') in 0.031439 seconds 
+Number of asset objects unloaded after import = 27
+========================================================================
+Received Import Request.
+  Time since last request: 0.000074 seconds.
+  path: Assets/ingrediente + pahare/prefabs/Grenadine.prefab
+  artifactKey: Guid(e8999297dca8505448aebf1c6e25efc7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/ingrediente + pahare/prefabs/Grenadine.prefab using Guid(e8999297dca8505448aebf1c6e25efc7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '652a91299c1aee98a1c04be72ce82c1f') in 0.028696 seconds 
+Number of asset objects unloaded after import = 27
+========================================================================
+Received Import Request.
+  Time since last request: 0.000043 seconds.
+  path: Assets/ingrediente + pahare/prefabs/Tabasco.prefab
+  artifactKey: Guid(ca5c7812768fe264a8a9e4bc45ae3ccc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/ingrediente + pahare/prefabs/Tabasco.prefab using Guid(ca5c7812768fe264a8a9e4bc45ae3ccc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0394768c85a9c87fc44c8bdc774a0d10') in 0.051463 seconds 
+Number of asset objects unloaded after import = 28
+========================================================================
+Received Import Request.
+  Time since last request: 0.000062 seconds.
+  path: Assets/ingrediente + pahare/prefabs/Whiskey2.prefab
+  artifactKey: Guid(61b02579c1a9dc2409142e6b090312a5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/ingrediente + pahare/prefabs/Whiskey2.prefab using Guid(61b02579c1a9dc2409142e6b090312a5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a233912fc5db262dbf2d4e7042d78670') in 0.068950 seconds 
+Number of asset objects unloaded after import = 23
+========================================================================
+Received Import Request.
+  Time since last request: 0.000033 seconds.
+  path: Assets/ingrediente + pahare/prefabs/MelonLiqor.prefab
+  artifactKey: Guid(d0ad87e177115e4468499b5ec976f118) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/ingrediente + pahare/prefabs/MelonLiqor.prefab using Guid(d0ad87e177115e4468499b5ec976f118) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4b3427a1006afe0df17bea5f46da61af') in 0.041794 seconds 
+Number of asset objects unloaded after import = 27
+========================================================================
+Received Import Request.
+  Time since last request: 2.295866 seconds.
+  path: Assets/ingrediente + pahare/models/material_sticla_pahare.mat
+  artifactKey: Guid(81e2dffac9d458d4c80bb37f01821bb9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/ingrediente + pahare/models/material_sticla_pahare.mat using Guid(81e2dffac9d458d4c80bb37f01821bb9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a2f186d450a52a6251ef0a04016c6f22') in 0.035259 seconds 
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 12.429839 seconds.
+  path: Assets/ingrediente + pahare/models/material_sticla_pahare 1.mat
+  artifactKey: Guid(24178bc5a40442c46bf83a47e1d10ad0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/ingrediente + pahare/models/material_sticla_pahare 1.mat using Guid(24178bc5a40442c46bf83a47e1d10ad0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1a878e0f6efb63c83d70042166dfea2a') in 0.020709 seconds 
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 11.698831 seconds.
+  path: Assets/ingrediente + pahare/models/TequilaSilver.fbx
+  artifactKey: Guid(024597e2549213342b8730b809e10b01) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/ingrediente + pahare/models/TequilaSilver.fbx using Guid(024597e2549213342b8730b809e10b01) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a971ea02fef1f076b4658e3c4df3ab67') in 0.099397 seconds 
+Number of asset objects unloaded after import = 28
+========================================================================
+Received Import Request.
+  Time since last request: 8.261409 seconds.
+  path: Assets/ingrediente + pahare/models/Tequila.fbx
+  artifactKey: Guid(0e7e257b6204e5142a062894e96efe7b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/ingrediente + pahare/models/Tequila.fbx using Guid(0e7e257b6204e5142a062894e96efe7b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2a2d925bbbffbb118464c3d1b8023398') in 0.102234 seconds 
+Number of asset objects unloaded after import = 28
+========================================================================
+Received Import Request.
+  Time since last request: 8.920949 seconds.
+  path: Assets/ingrediente + pahare/models/SourMix.fbx
+  artifactKey: Guid(d744facbbac617d4aae4acbdab66710f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/ingrediente + pahare/models/SourMix.fbx using Guid(d744facbbac617d4aae4acbdab66710f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ff539f047d9a2b3350510bf35cb6fe91') in 0.091332 seconds 
+Number of asset objects unloaded after import = 28
+========================================================================
+Received Import Request.
+  Time since last request: 10.377404 seconds.
+  path: Assets/ingrediente + pahare/models/VermouthRed.fbx
+  artifactKey: Guid(fa28fa70af4b30f42a12cef1f43df6d5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/ingrediente + pahare/models/VermouthRed.fbx using Guid(fa28fa70af4b30f42a12cef1f43df6d5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '21163c558c8af3696ff31273f67a9766') in 0.102331 seconds 
+Number of asset objects unloaded after import = 36
+========================================================================
+Received Import Request.
+  Time since last request: 57.718961 seconds.
+  path: Assets/ingrediente + pahare/models/Vodka.fbx
+  artifactKey: Guid(3c8fab297deeff2449ee3dec6c91e0d2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/ingrediente + pahare/models/Vodka.fbx using Guid(3c8fab297deeff2449ee3dec6c91e0d2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '883bcd64cc1c76da2482d324e33bc5da') in 0.067697 seconds 
+Number of asset objects unloaded after import = 31
+========================================================================
+Received Import Request.
+  Time since last request: 152.077120 seconds.
+  path: Assets/ingrediente + pahare/prefabs/Coca-Cola.prefab
+  artifactKey: Guid(742efecb1b4a6d14495b58c02bca07bb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/ingrediente + pahare/prefabs/Coca-Cola.prefab using Guid(742efecb1b4a6d14495b58c02bca07bb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ff52bf8393487f210b62a3c8829a80d2') in 0.051617 seconds 
+Number of asset objects unloaded after import = 30
+========================================================================
+Received Import Request.
+  Time since last request: 0.000064 seconds.
+  path: Assets/ingrediente + pahare/prefabs/VermouthRed.prefab
+  artifactKey: Guid(5bbbf0d5275e8df4d9d387a1e4642197) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/ingrediente + pahare/prefabs/VermouthRed.prefab using Guid(5bbbf0d5275e8df4d9d387a1e4642197) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9261b2e38bc00dda12d38c01c93090ef') in 0.047091 seconds 
+Number of asset objects unloaded after import = 35
+========================================================================
+Received Import Request.
+  Time since last request: 0.000050 seconds.
+  path: Assets/ingrediente + pahare/prefabs/TequilaSilver.prefab
+  artifactKey: Guid(b1536b5997117df4691c74feceb94c8a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/ingrediente + pahare/prefabs/TequilaSilver.prefab using Guid(b1536b5997117df4691c74feceb94c8a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '579123ba07173d369c2bfa090087ca49') in 0.044365 seconds 
+Number of asset objects unloaded after import = 28
+========================================================================
+Received Import Request.
+  Time since last request: 0.000083 seconds.
+  path: Assets/ingrediente + pahare/prefabs/Vodka.prefab
+  artifactKey: Guid(17755cf1cf209e44b93c17b6718b48a6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/ingrediente + pahare/prefabs/Vodka.prefab using Guid(17755cf1cf209e44b93c17b6718b48a6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '27770b6e6254ed1cab51ecccd5a9a000') in 0.044366 seconds 
+Number of asset objects unloaded after import = 24
 Editor requested this worker to shutdown with reason: Scaling down because of idle timeout
 AssetImportWorker is now disconnected from the server
 Process exiting
