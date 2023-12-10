@@ -15,6 +15,7 @@ Lab 11:
 -optimizare texturi
 -creative mode (all recipes)
 -pagini cu retete (modelare)
+-maini (modelare)
 -UI start meniu
 -walk/grab/interactables
 Lab 12:
