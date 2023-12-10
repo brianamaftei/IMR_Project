@@ -1,0 +1,34 @@
+{
+    "name": "VR Input",
+    "maps": [
+        {
+            "name": "Left Hand",
+            "id": "13c2c3ab-1f68-4065-832b-28018c40e08d",
+            "actions": [
+                {
+                    "name": "New action",
+                    "type": "Value",
+                    "id": "ff1c12b3-cd4c-4ddb-94a3-d156c59fedc1",
+                    "expectedControlType": "Axis",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "d0194d74-a4f6-421b-9764-4cd09ffaa05a",
+                    "path": "*/{Grip}",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "New action",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}

@@ -3,7 +3,12 @@ guid: 76c179cdfd5c7284cb19ad30cb7a61d0
 ModelImporter:
   serializedVersion: 21300
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Lime_Tx
+    second: {fileID: 2100000, guid: 271af827e90a1f4458b9b050fbd197c9, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
