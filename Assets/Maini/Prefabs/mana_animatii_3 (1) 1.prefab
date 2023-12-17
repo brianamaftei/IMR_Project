@@ -980,7 +980,7 @@ GameObject:
   - component: {fileID: 8145781945515419464}
   - component: {fileID: 2876548170152770866}
   m_Layer: 0
-  m_Name: mana_animatii_3 (1)
+  m_Name: mana_animatii_3 (1) 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
