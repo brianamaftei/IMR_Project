@@ -3,7 +3,27 @@ guid: 473c7de9135af31409bd1c0c04140e96
 ModelImporter:
   serializedVersion: 21300
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Lime_Tx.001
+    second: {fileID: 2100000, guid: 012e4faa70b86224a881842126eaea9b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material.002
+    second: {fileID: 2100000, guid: 365da70b1e2c83849bc4e34fa29338d9, type: 2}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: 1000_F_181771673_kwl7Y8OdxXs5PoPNO13agbHhrkdEHqxr
+    second: {fileID: 2800000, guid: 2eb3e54933c4ba245b84f7ea4558e0db, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: istockphoto-180840998-612x612
+    second: {fileID: 2800000, guid: a64b88ca870f79a478fd2109ebbb9943, type: 3}
   materials:
     materialImportMode: 2
     materialName: 0

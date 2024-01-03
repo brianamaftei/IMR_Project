@@ -3,7 +3,27 @@ guid: 00509380bac24834988430b664cad06e
 ModelImporter:
   serializedVersion: 21300
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Lime_Tx
+    second: {fileID: 2100000, guid: f46e27d702ec0ce4a87862d0f916f4ca, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material
+    second: {fileID: 2100000, guid: 6477dcd8752bee644a3f8187387ee8cd, type: 2}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Orange-Peel-Texture
+    second: {fileID: 2800000, guid: 64a12d72dd5ae6049a15c23e92bd6de4, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: download (4)
+    second: {fileID: 2800000, guid: 0f83a96e01ccdaf40895538bad1a1217, type: 3}
   materials:
     materialImportMode: 2
     materialName: 0
