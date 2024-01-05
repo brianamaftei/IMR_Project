@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 4837527768560217398}
   - component: {fileID: 4837527768560217399}
   - component: {fileID: 4837527768560217397}
+  - component: {fileID: 730646769725711269}
   m_Layer: 0
   m_Name: Celery
   m_TagString: Untagged
@@ -293,3 +294,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   prefab: {fileID: 5217852605323999121}
+--- !u!114 &730646769725711269
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5217852605323999121}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bdd88263c2f6c7e4da0d149856064ecd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.XR.Interaction.Toolkit;
+
 
 public class Cup : MonoBehaviour
 {
@@ -11,16 +13,60 @@ public class Cup : MonoBehaviour
     private Vector3 originalColliderSize; 
     public Color liquidColor;
     private Color initialColor;
-    private Dictionary<Color, float> colorHistory = new Dictionary<Color, float>();
+    public Transform attachCeleryPoint;
+    public Transform attachCherryPoint;
+    public Transform attachLemonPoint;
 
+    public Dictionary<string, ObjectInfo> objectsCup = new Dictionary<string, ObjectInfo>();
 
     private void Start()
     {
+        GameObject cupObject = gameObject;
         liquidRenderer = GetComponent<Renderer>();
         boxCollider = GetComponent<BoxCollider>();
         originalColliderSize = boxCollider.size;
         initialColor = liquidRenderer.material.GetColor("_SideColor");
-        AddColorToHistory(initialColor, liquidRenderer.material.GetFloat("_Fill"));
+        AddObjectToCup("Liquids", new ObjectInfo("Liquids", 1, cupObject, liquidRenderer.material.GetFloat("_Fill"), initialColor));
+        // objectsCup["Liquids"].PrintColorHistory();
+    
+    }
+
+    public void HandleCollision(GameObject detectedObject)
+    {
+        GameObject objectInCup = detectedObject;
+        string objectName = objectInCup.tag;
+        Debug.Log($"Collision detected with {objectName}!!!!!!");
+
+        Dictionary<string, Transform> attachPoints = new Dictionary<string, Transform>
+        {
+            { "Celery", attachCeleryPoint },
+            { "OrangeSlice", null },
+            { "LemonSlice", attachLemonPoint },
+            { "Mint", null },
+            { "Lime", null },
+            { "Cherry", attachCherryPoint }
+        };
+
+        if (attachPoints.ContainsKey(objectName))
+        {
+            if (objectsCup.ContainsKey(objectName))
+            {
+                objectsCup[objectName].numberOfObjects++;
+                Debug.Log("It was added another " + objectName + " into the cup");
+            }
+            else
+            {
+                AttachObjectToCup(attachPoints[objectName], objectInCup);
+                objectsCup.Add(objectName, new ObjectInfo(objectName, 1, objectInCup));
+                Debug.Log("It was added " + objectName + " into the glass");
+            }
+        }
+    }
+
+    private void AddObjectToCup(string objectName, ObjectInfo objectInfo)
+    {
+        Debug.Log("add object");
+        objectsCup[objectName] = objectInfo;
     }
 
     public void StartFilling()
@@ -31,81 +77,157 @@ public class Cup : MonoBehaviour
             currentFillLevel += 0.0005f;
             currentFillLevel = Mathf.Clamp01(currentFillLevel);
             liquidRenderer.material.SetFloat("_Fill", currentFillLevel);
-            AddColorToHistory(liquidColor, 0.0005f);
+            objectsCup["Liquids"].AddColorToHistory(liquidColor, 0.0005f);
             HandleColors();
             AdjustTopSide(currentFillLevel);
         }
     }
 
-    private void AddColorToHistory(Color color, float fillLevel)
+
+    private void HandleColors()
     {
-        if (colorHistory.ContainsKey(color))
-        {
-            colorHistory[color] += fillLevel;
-        }
-        else
-        {
-            colorHistory.Add(color, fillLevel);
-        }
+
+        Color mixedColor = MixColors();
+
+
+        Debug.Log("Mixed Color: " + mixedColor);
+
+        liquidRenderer.material.SetColor("_SideColor", mixedColor);
+        liquidRenderer.material.SetColor("_TopColor", mixedColor);
+
+    }
+
+    private Color MixColors()
+    {
+            float totalWeight = 0f;
+            float mixedRed = 0f;
+            float mixedGreen = 0f;
+            float mixedBlue = 0f;
+            Dictionary<Color, float> colorHistory = objectsCup["Liquids"].GetColorHistory();
+            
+
+            foreach (var entry in colorHistory)
+            {
+                Color color = entry.Key;
+                float fillLevel = entry.Value;
+
+                mixedRed += color.r * fillLevel;
+                mixedGreen += color.g * fillLevel;
+                mixedBlue += color.b * fillLevel;
+
+                totalWeight += fillLevel;
+            }
+
+            mixedRed /= totalWeight;
+            mixedGreen /= totalWeight;
+            mixedBlue /= totalWeight;
+
+            return new Color(mixedRed, mixedGreen, mixedBlue);
     }
 
 
+    private void AdjustTopSide(float fillPercentage)
+    {
+        Vector3 newSize = boxCollider.size;
+        newSize.z = originalColliderSize.z * currentFillLevel * 8.0f;
 
-private void HandleColors()
-{
+        float maxZSize = originalColliderSize.z;
 
-Color mixedColor = MixColors();
+        newSize.z = Mathf.Min(newSize.z, maxZSize);
+
+        boxCollider.size = newSize;
+
+        Vector3 newCenter = boxCollider.center;
+        newCenter.z = newSize.z/2.0f;
+        boxCollider.center = newCenter;
+    }
+
+    private void AttachObjectToCup(Transform attachPoint, GameObject objectToAttach)
+    {
+        XRGrabInteractable grabInteractable = objectToAttach.GetComponent<XRGrabInteractable>();
+        if (grabInteractable != null)
+        {
+            Destroy(grabInteractable);
+        }
+
+        Rigidbody rb = objectToAttach.GetComponent<Rigidbody>();
+        if (rb != null)
+        {
+            Destroy(rb);
+        }
+
+        BoxCollider boxCollider = objectToAttach.GetComponent<BoxCollider>();
+        if (boxCollider != null)
+        {
+            boxCollider.isTrigger = true;
+        }
+        objectToAttach.transform.parent = attachPoint;
+        objectToAttach.transform.position = attachPoint.position;
+        objectToAttach.transform.rotation = attachPoint.rotation;
+    }
 
 
-Debug.Log("Mixed Color: " + mixedColor);
-
-liquidRenderer.material.SetColor("_SideColor", mixedColor);
-liquidRenderer.material.SetColor("_TopColor", mixedColor);
+    public Dictionary<string, ObjectInfo> GetObjectsCup()
+    {
+        return objectsCup;
+    }
 
 }
-
-private Color MixColors()
+public class ObjectInfo
 {
-        float totalWeight = 0f;
-        float mixedRed = 0f;
-        float mixedGreen = 0f;
-        float mixedBlue = 0f;
+    public string name;
+    public int numberOfObjects;
+    public GameObject firstObject;
+    public Dictionary<Color, float> colorHistory;
+
+    public ObjectInfo(string tag, int initialCount, GameObject initialObject, float initialFillLevel=0.0f, Color color =  default(Color))
+    {
+        name=tag;
+        numberOfObjects = initialCount;
+        firstObject = initialObject;
+        InitialiseColorHistory(tag, initialFillLevel, color);
+    }
+
+    private void InitialiseColorHistory(string name, float fillLevel, Color initialColor)
+    {
+        if (name == "Liquids")
+        {
+            colorHistory = new Dictionary<Color, float>();
+            AddColorToHistory(initialColor, fillLevel);
+        }
+    }
+
+    public void AddColorToHistory(Color color, float fillLevel)
+    {
+        if (colorHistory != null) 
+        {
+            if (colorHistory.ContainsKey(color))
+            {
+                colorHistory[color] += fillLevel;
+            }
+            else
+            {
+                colorHistory.Add(color, fillLevel);
+            }
+        }
+        else
+        {
+            Debug.LogError("Color history dictionary is null. Make sure it's initialized properly.");
+        }
+    }
+
+    public Dictionary<Color, float> GetColorHistory()
+    {
+        return colorHistory;
+    }
+
+    public void PrintColorHistory()
+    {
+        Debug.Log("Color History:");
 
         foreach (var entry in colorHistory)
         {
-            Color color = entry.Key;
-            float fillLevel = entry.Value;
-
-            mixedRed += color.r * fillLevel;
-            mixedGreen += color.g * fillLevel;
-            mixedBlue += color.b * fillLevel;
-
-            totalWeight += fillLevel;
+            Debug.Log($"Color: {entry.Key}, Fill Level: {entry.Value}");
         }
-
-        mixedRed /= totalWeight;
-        mixedGreen /= totalWeight;
-        mixedBlue /= totalWeight;
-
-        return new Color(mixedRed, mixedGreen, mixedBlue);
-}
-
-
-private void AdjustTopSide(float fillPercentage)
-{
-    Vector3 newSize = boxCollider.size;
-    newSize.z = originalColliderSize.z * currentFillLevel * 8.0f;
-
-    float maxZSize = originalColliderSize.z;
-
-    newSize.z = Mathf.Min(newSize.z, maxZSize);
-
-    boxCollider.size = newSize;
-
-    Vector3 newCenter = boxCollider.center;
-    newCenter.z = newSize.z/2.0f;
-    boxCollider.center = newCenter;
-}
-
-
+    }
 }

@@ -8,6 +8,10 @@ TagManager:
   - Lemon
   - Orange
   - Lime
+  - Celery
+  - Poco
+  - Cherry
+  - LemonSlice
   layers:
   - Default
   - TransparentFX
