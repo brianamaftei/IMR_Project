@@ -5,7 +5,7 @@ using UnityEngine;
 public class Drink : MonoBehaviour
 {
     public GameObject DrinkObject { get; private set; }
-    public Dictionary<string, ObjectInfo> ObjectsInCup { get; private set; }
+    public Dictionary<string, ObjectInfo> ObjectsInCup { get; set; }
 
 
     private void OnCollisionEnter(Collision collision)

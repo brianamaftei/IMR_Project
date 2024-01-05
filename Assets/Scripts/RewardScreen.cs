@@ -50,6 +50,11 @@ public class RewardScreen : MonoBehaviour
     {
         GameObject[] inactiveRecipes = Array.FindAll(allRecipes, recipe => !recipe.activeSelf);
         numRecipes = Mathf.Min(inactiveRecipes.Length, 3); // Select at most 3 inactive recipes
+        if (numRecipes == 0)
+        {
+            PlayerPrefs.SetString("GameWon", "True");
+            SceneManager.LoadSceneAsync("MainMenu");
+        }
         for (int i = 0; i < numRecipes; i++)
         {
             int randomIndex = UnityEngine.Random.Range(0, inactiveRecipes.Length);
@@ -66,12 +71,8 @@ public class RewardScreen : MonoBehaviour
             foreach (GameObject page in inactiveRecipePages)
                 Destroy(page);
             selectedRecipes[0].SetActive(true); // Activate the original recipe page
+            PlayerPrefs.SetString("GameState", "Day");
             canvas.SetActive(false); // Deactivate the canvas
-        }
-        else
-        {
-            PlayerPrefs.SetString("GameWon", "True");
-            SceneManager.LoadSceneAsync("MainMenu");
         }
     }
     public void OnCenterButtonClick()
@@ -81,6 +82,7 @@ public class RewardScreen : MonoBehaviour
             foreach (GameObject page in inactiveRecipePages)
                 Destroy(page);
             selectedRecipes[1].SetActive(true); // Activate the original recipe page
+            PlayerPrefs.SetString("GameState", "Day");
             canvas.SetActive(false); // Deactivate the canvas
         }
     }
@@ -91,6 +93,7 @@ public class RewardScreen : MonoBehaviour
             foreach (GameObject page in inactiveRecipePages)
                 Destroy(page);
             selectedRecipes[2].SetActive(true); // Activate the original recipe page
+            PlayerPrefs.SetString("GameState", "Day");
             canvas.SetActive(false); // Deactivate the canvas
         }
     }

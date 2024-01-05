@@ -16,21 +16,35 @@ public class RecipeSelectionMenu : MonoBehaviour
 
     public void NextRecipe()
     {
-        do
+        if (PlayerPrefs.HasKey("GameState"))
         {
-            currentRecipeIndex = (currentRecipeIndex + 1) % availableRecipes.Length;
-        } while (availableRecipes[currentRecipeIndex].activeSelf == false);
-        
-        UpdateRecipeName();
+            string oldState = PlayerPrefs.GetString("GameState");
+            if (oldState == "Day")
+            {
+                do
+                {
+                    currentRecipeIndex = (currentRecipeIndex + 1) % availableRecipes.Length;
+                } while (availableRecipes[currentRecipeIndex].activeSelf == false);
+
+                UpdateRecipeName();
+            }
+        }
     }
 
     public void PreviousRecipe()
     {
-        do
+        if (PlayerPrefs.HasKey("GameState"))
         {
-            currentRecipeIndex = (currentRecipeIndex - 1 + availableRecipes.Length) % availableRecipes.Length;
-        } while (availableRecipes[currentRecipeIndex].activeSelf == false);
-        UpdateRecipeName();
+            string oldState = PlayerPrefs.GetString("GameState");
+            if (oldState == "Day")
+            {
+                do
+                {
+                    currentRecipeIndex = (currentRecipeIndex - 1 + availableRecipes.Length) % availableRecipes.Length;
+                } while (availableRecipes[currentRecipeIndex].activeSelf == false);
+                UpdateRecipeName();
+            }
+        }
     }
 
     void UpdateRecipeName()

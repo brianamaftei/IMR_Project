@@ -209,6 +209,7 @@ GameObject:
   - component: {fileID: 7496822335347984804}
   - component: {fileID: 7496822335347984805}
   - component: {fileID: 7496822335347984807}
+  - component: {fileID: 4159390165385858216}
   m_Layer: 0
   m_Name: Poco Grande Glass
   m_TagString: Poco
@@ -223,9 +224,9 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6555235327020647351}
-  m_LocalRotation: {x: -0.008291933, y: -0.008723983, z: 0.0027129578, w: 0.9999239}
+  m_LocalRotation: {x: -0.008287958, y: -0.008720729, z: 0.0027113392, w: 0.99992394}
   m_LocalPosition: {x: 2009.385, y: 5128.754, z: -5198.809}
-  m_LocalScale: {x: 15000, y: 15000, z: 15000}
+  m_LocalScale: {x: 3, y: 3, z: 3}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 7916167387570576967}
@@ -418,6 +419,18 @@ MonoBehaviour:
   m_StartingSingleGrabTransformers: []
   m_StartingMultipleGrabTransformers: []
   m_AddDefaultGrabTransformers: 1
+--- !u!114 &4159390165385858216
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6555235327020647351}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3eaa544d9f12c06499022269f85b7b79, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &7496822335080447024
 GameObject:
   m_ObjectHideFlags: 0

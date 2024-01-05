@@ -19,7 +19,7 @@ public class Cup : MonoBehaviour
 
     public Dictionary<string, ObjectInfo> objectsCup = new Dictionary<string, ObjectInfo>();
 
-    private void Start()
+    public void Start()
     {
         GameObject cupObject = gameObject;
         liquidRenderer = GetComponent<Renderer>();
