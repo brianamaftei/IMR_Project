@@ -12,6 +12,8 @@ TagManager:
   - Poco
   - Cherry
   - LemonSlice
+  - Coaster
+  - Zombie
   layers:
   - Default
   - TransparentFX

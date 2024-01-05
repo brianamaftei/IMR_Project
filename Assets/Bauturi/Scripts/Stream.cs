@@ -137,10 +137,10 @@ private void HandleCupInteraction(RaycastHit hit)
             Debug.Log("Cup script not found on the Cup GameObject.");
         }
     }
-    else
-    {
-        Debug.Log("Cup tag is wrong");
-    }
+    // else
+    // {
+    //     Debug.Log("Cup tag is wrong");
+    // }
 }
 
 

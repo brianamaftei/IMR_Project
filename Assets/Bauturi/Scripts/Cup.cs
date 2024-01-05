@@ -27,7 +27,6 @@ public class Cup : MonoBehaviour
         originalColliderSize = boxCollider.size;
         initialColor = liquidRenderer.material.GetColor("_SideColor");
         AddObjectToCup("Liquids", new ObjectInfo("Liquids", 1, cupObject, liquidRenderer.material.GetFloat("_Fill"), initialColor));
-        // objectsCup["Liquids"].PrintColorHistory();
     
     }
 
@@ -161,73 +160,24 @@ public class Cup : MonoBehaviour
         {
             boxCollider.isTrigger = true;
         }
+
         objectToAttach.transform.parent = attachPoint;
         objectToAttach.transform.position = attachPoint.position;
         objectToAttach.transform.rotation = attachPoint.rotation;
     }
 
 
-    public Dictionary<string, ObjectInfo> GetObjectsCup()
+    public Dictionary<string, ObjectInfo> GetObjectsInCup()
     {
         return objectsCup;
     }
 
-}
-public class ObjectInfo
-{
-    public string name;
-    public int numberOfObjects;
-    public GameObject firstObject;
-    public Dictionary<Color, float> colorHistory;
-
-    public ObjectInfo(string tag, int initialCount, GameObject initialObject, float initialFillLevel=0.0f, Color color =  default(Color))
+    public void PrintObjectsInCup()
     {
-        name=tag;
-        numberOfObjects = initialCount;
-        firstObject = initialObject;
-        InitialiseColorHistory(tag, initialFillLevel, color);
-    }
-
-    private void InitialiseColorHistory(string name, float fillLevel, Color initialColor)
-    {
-        if (name == "Liquids")
+        foreach (var entry in objectsCup)
         {
-            colorHistory = new Dictionary<Color, float>();
-            AddColorToHistory(initialColor, fillLevel);
+            entry.Value.PrintObjectInfo();
         }
     }
 
-    public void AddColorToHistory(Color color, float fillLevel)
-    {
-        if (colorHistory != null) 
-        {
-            if (colorHistory.ContainsKey(color))
-            {
-                colorHistory[color] += fillLevel;
-            }
-            else
-            {
-                colorHistory.Add(color, fillLevel);
-            }
-        }
-        else
-        {
-            Debug.LogError("Color history dictionary is null. Make sure it's initialized properly.");
-        }
-    }
-
-    public Dictionary<Color, float> GetColorHistory()
-    {
-        return colorHistory;
-    }
-
-    public void PrintColorHistory()
-    {
-        Debug.Log("Color History:");
-
-        foreach (var entry in colorHistory)
-        {
-            Debug.Log($"Color: {entry.Key}, Fill Level: {entry.Value}");
-        }
-    }
 }
