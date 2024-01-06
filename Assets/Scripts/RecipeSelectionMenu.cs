@@ -52,10 +52,24 @@ public class RecipeSelectionMenu : MonoBehaviour
         string formattedName = FormatRecipeName(availableRecipes[currentRecipeIndex].name);
         recipeNameText.text = formattedName;
     }
-    string FormatRecipeName(string name)
+    public string FormatRecipeName(string name)
     {
         string formattedName = Regex.Replace(name, "Page$", "").Trim();
         formattedName = Regex.Replace(formattedName, "(\\B[A-Z])", " $1");
         return formattedName;
     }
+
+    public void JumpToRecipe(string targetRecipeName)
+    {
+        for (int i = 0; i < availableRecipes.Length; i++)
+        {
+            if (availableRecipes[i].activeSelf && availableRecipes[i].name == targetRecipeName)
+            {
+                currentRecipeIndex = i;
+                UpdateRecipeName();
+                break;
+            }
+        }
+    }
+
 }
