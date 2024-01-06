@@ -1,9 +1,11 @@
+using UnityEngine;
 using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Reflection;
 using TMPro;
-using UnityEngine;
+using System.Linq;
+
 
 public class ScorePoints : MonoBehaviour
 {
@@ -18,6 +20,16 @@ public class ScorePoints : MonoBehaviour
     private int dayCounter = 1;
 
     private Client currentClient;
+
+    private GameObject HandleScorePoints;
+    private ScorePoints scorePointsComponent;
+
+    private GameObject Canvas;
+    private RecipeSelectionMenu canvasComponent;
+
+    private List<GameObject> newListRecipes = new List<GameObject>();
+    private int currentIndex = 0;
+
 
     private void Start()
     {   
@@ -35,24 +47,100 @@ public class ScorePoints : MonoBehaviour
         recipe.Add("Cherry", 1f);
         recipes.Add("Pina Colada", recipe);
     }
+
     public void UpdateScore(Dictionary<string, ObjectInfo> objects)
     {
-        newScore += UpdateValue(score, objects);
+        newScore += UpdateValue(objects);
         scoreBoard.text = $"Score: {score + newScore}";
-        if (newScore >= 1500 + dayCounter * 100)
-            PlayerPrefs.SetString("GameState", "Night");
+        if (newScore >= 1)//1500 + dayCounter * 100)
+            {
+                PlayerPrefs.SetString("GameState", "Night");
+                score += newScore;
+                StartingTheNight();
+            }
+
     }
+    
+    List<GameObject> GenerateRecipeList(int numberOfRecipes)
+    {
+        List<GameObject> generatedList = new List<GameObject>();
+
+        HandleGameState handleGameState = FindObjectOfType<HandleGameState>();
+        HandleGameState gameComponent = handleGameState.GetComponent<HandleGameState>();
+        GameObject[] allRecipes = gameComponent.allRecipes;
+
+        GameObject[] activeRecipes = allRecipes.Where(recipe => recipe.activeSelf).ToArray();
+
+        if (activeRecipes.Length > 0)
+        {
+            for (int i = 0; i < numberOfRecipes; i++)
+            {
+                int randomIndex = UnityEngine.Random.Range(0, activeRecipes.Length);
+                GameObject randomRecipe = activeRecipes[randomIndex];
+                generatedList.Add(randomRecipe);
+            }
+        }
+        return generatedList;
+    }
+
+    void StartingTheNight()
+    {
+        newListRecipes = GenerateRecipeList(5);
+        PlayerPrefs.SetString("ClientsLeft", "True");
+        NextRecipe();        
+    }
+
+    public void NextRecipe()
+    {
+        if (currentIndex < newListRecipes.Count)
+        {
+            GameObject currentRecipe = newListRecipes[currentIndex];
+            currentIndex++;
+            Debug.Log(currentIndex);
+            Canvas= GameObject.Find("Canvas");
+            canvasComponent = Canvas.GetComponent<RecipeSelectionMenu>();
+            canvasComponent.JumpToRecipe(currentRecipe.name);
+            string formattedName = canvasComponent.FormatRecipeName(currentRecipe.name);
+
+            NewClient(formattedName);
+        }
+        else
+        {
+            EndingTheNight();
+        }
+    }
+
+    public void NewClient(string currentRecipeName)
+    {
+        Client clientComponent = FindObjectOfType<Client>();
+        if (clientComponent != null)
+        {
+            clientComponent.SetDrinkName(currentRecipeName);
+            clientComponent.SpawnClient();
+
+        }
+        
+        SetCurrentClient(clientComponent);
+    }
+
+    void EndingTheNight()
+    {
+        currentIndex = 0;
+        newListRecipes.Clear();
+        PlayerPrefs.SetString("ClientsLeft", "False");
+    }
+
 
     public void UpdatePoints(Dictionary<string, ObjectInfo> objects)
     {
-        newPoints = UpdateValue(points, objects);
+        newPoints += UpdateValue(objects);
         scoreBoard.text = $"Points: {points + newPoints}";
         if (PlayerPrefs.HasKey("ClientsLeft"))
         {
             string oldState = PlayerPrefs.GetString("ClientsLeft");
             if (oldState == "False")
             {
-                if (newPoints >= 1500 + dayCounter * 100)
+                if (newPoints >= 1)///>= 1500 + dayCounter * 100)
                 {
                     rs.GetComponent<RewardScreen>().ActivateCanvas();
                 }
@@ -66,13 +154,12 @@ public class ScorePoints : MonoBehaviour
         }
 
         currentClient.DestroyClient(); 
-        HandleGameState handleGameState = FindObjectOfType<HandleGameState>();
-        HandleGameState gameComponent = handleGameState.GetComponent<HandleGameState>();
-        gameComponent.NextRecipe();       
+        NextRecipe();       
 
     }
-    private float UpdateValue(float val, Dictionary<string, ObjectInfo> objects)
+    private float UpdateValue(Dictionary<string, ObjectInfo> objects)
     {
+        float val = 0f;
         var recipe = recipes[selectedRecipe.text];
         var includedKeys = new HashSet<string>();
         foreach (var entry in objects)

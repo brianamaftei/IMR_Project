@@ -1,4 +1,5 @@
-Master Mixologist  
+# Master Mixologist  
+
 State of the art:  
 https://docs.google.com/document/d/1ZoCLF33HKUQQ8GL6eirE1mvY0AZWB_ZKBkG8nheimPY/edit?usp=sharing  
 Main Modules:  
@@ -9,36 +10,21 @@ Am realizat scena principala, continand barul care va fi spatiul efectiv de joc,
 Desi multe din obiectele de care avem nevoie se pot gasi online, am ales sa realizam sala si clientii proprii pentru a conferi proiectului un stil unic noua.
 Am intampinat dificultati la exportul clientilor, deoarece am realizat toate variatiile in acelasi proiect blender. De asemenea, peretii barului nu au fost exportati corect si au trebuit sa fie refacuti.
 
-
-**Urmatoarele sunt limite superioare orientative. Daca perfectionam doar lucrurile de baza e foarte bine
-Lab 11: 
--optimizare texturi
--creative mode (all recipes)
--pagini cu retete (modelare)
--maini (modelare)
--UI start meniu
--walk/grab/interactables
-Lab 12:
--evaluarea pasilor retetei + UI pasi
--states zi / noapte (noapte inca goala, doar sa stie ca e zi)
--funxtionalitati lichid (curgere + amestecare)
--functionalitate ingrediente solide
-Lab 13:
--functionalitate noapte: 
--venire clienti
--comenzi
--punctaje
--rewards la finalul noptii
--diploma final
-Lab 14:
--tot ce ramane nefinalizat din urma
--sunete maybe
-
-
-what we actually did (so far):
-Lab11:
--optimizare camera
--creative mode (all recipes)
--pagini cu retete (modelare)
--UI start meniu
--walk/grab/interactables
+Features:
+- optimizare texturi
+- creative mode (all recipes are available, no day/night)
+- pagini cu retete (modelare)
+- maini (modelare)
+- UI start meniu
+- walk / grab / interactables
+- scor: evaluarea corectitudinii retetei (cat de apropiat e de reteta selectata)
+- states zi / noapte
+- functionalitati lichid (curgere + amestecare) *
+- functionalitate ingrediente solide *
+- functionalitate noapte: 
+  - venire clienti
+  - comenzi
+  - punctaje: same as scor
+  - rewards la finalul noptii. if no rewards available : win
+  - diploma final  
+*2 retete complet functionale
