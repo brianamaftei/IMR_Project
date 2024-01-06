@@ -52,10 +52,11 @@ public class ScorePoints : MonoBehaviour
     {
         newScore += UpdateValue(objects);
         scoreBoard.text = $"Score: {score + newScore}";
-        if (newScore >= 1)//1500 + dayCounter * 100)
+        if (newScore >= 1500 + dayCounter * 100)
             {
                 PlayerPrefs.SetString("GameState", "Night");
                 score += newScore;
+                newScore = 0;
                 StartingTheNight();
             }
 
@@ -150,6 +151,7 @@ public class ScorePoints : MonoBehaviour
                 }
                 dayCounter += 1;
                 points += newPoints;
+                newPoints = 0;
             }
         }
 
