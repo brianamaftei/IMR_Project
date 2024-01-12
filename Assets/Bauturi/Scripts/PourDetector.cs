@@ -18,38 +18,42 @@ public class PourDetector : MonoBehaviour
         float currentAngle = CalculatePourAngle();
         // print("Current Angle: " + currentAngle);
 
-        bool pourCheck = Mathf.Abs(currentAngle) > pourThreshold;
-        if (isPouring != pourCheck)
+        if (!gameObject.CompareTag("Juicer"))
         {
-            isPouring = pourCheck;
+            bool pourCheck = Mathf.Abs(currentAngle) > pourThreshold;
 
-            if (isPouring)
+            if (isPouring != pourCheck)
             {
-                StartPour();
-            }
-            else
-            {
-                EndPour();
+                isPouring = pourCheck;
+
+                if (isPouring)
+                {
+                    StartPour();
+                }
+                else
+                {
+                    EndPour();
+                }
             }
         }
     }
 
 
-private void StartPour()
-{
-    print("Start Pouring");
-    currentStream = CreateStream();
-    currentStream.liquidColor = ColorOfMaterial();
+    private void StartPour()
+    {
+        print("Start Pouring");
+        currentStream = CreateStream();
+        currentStream.liquidColor = ColorOfMaterial();
 
-    if (currentStream != null)
-    {
-        currentStream.Begin();
+        if (currentStream != null)
+        {
+            currentStream.Begin();
+        }
+        else
+        {
+            Debug.LogError("Error creating Stream object.");
+        }
     }
-    else
-    {
-        Debug.LogError("Error creating Stream object.");
-    }
-}
     private void EndPour()
     {
         print("End Pouring");
@@ -58,27 +62,51 @@ private void StartPour()
     }
 
     private float CalculatePourAngle()
-   {
+    {
       float pourAngle = Mathf.Asin(transform.forward.y) * Mathf.Rad2Deg;
       return pourAngle;
     }
 
 
-private Stream CreateStream()
-{
-    GameObject streamObject = Instantiate(streamPrefab, origin.position, Quaternion.identity, transform);
-    return streamObject.GetComponent<Stream>();
-}
+    private Stream CreateStream()
+    {
+        GameObject streamObject = Instantiate(streamPrefab, origin.position, Quaternion.identity, transform);
+        return streamObject.GetComponent<Stream>();
+    }
 
-private Color ColorOfMaterial()
-{
-    
-    Color albedoColor = liquid.color;
-    //  albedoColor.r *= 255;
-    //         albedoColor.g *= 255;
-    //         albedoColor.b *= 255;
+    private Color ColorOfMaterial()
+    {
+        
+        Color albedoColor = liquid.color;
+        //  albedoColor.r *= 255;
+        //         albedoColor.g *= 255;
+        //         albedoColor.b *= 255;
 
-    return albedoColor;
-}
+        return albedoColor;
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (gameObject.CompareTag("Juicer"))
+        {
+            if (collision.gameObject.CompareTag("Lime"))
+            {
+                isPouring = true;
+                StartPour();
+            }
+        }
+    }
+
+    private void OnCollisionExit(Collision collision)
+    {
+        if (gameObject.CompareTag("Juicer"))
+        {
+            if (collision.gameObject.CompareTag("Lime"))
+            {
+                isPouring = false;
+                EndPour();
+            }
+        }
+    }
 
 }
