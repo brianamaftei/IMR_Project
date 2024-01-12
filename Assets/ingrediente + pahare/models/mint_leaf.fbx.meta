@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 4b12232e49224954baae2a5901a27b71
+guid: c30db2bb0b834d74ea4647910c3f9f7f
 ModelImporter:
   serializedVersion: 21300
   internalIDToNameTable: []
@@ -7,13 +7,8 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: Rau hung
-    second: {fileID: 2100000, guid: d47037e8d1e3888468020ef9076b56cb, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Standard_2
-    second: {fileID: 2100000, guid: 9c62a1a2dd4b7d7449647df68560d0d9, type: 2}
+      name: Material.002
+    second: {fileID: 2100000, guid: 9093a204daac6d5439870b3288a228ea, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

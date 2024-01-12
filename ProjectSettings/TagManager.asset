@@ -21,6 +21,9 @@ TagManager:
   - Juicer
   - SugarCane
   - Sugar
+  - Ice
+  - Mint
+  - OrangeSlice
   layers:
   - Default
   - TransparentFX

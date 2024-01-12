@@ -16,6 +16,9 @@ public class Cup : MonoBehaviour
     public Transform attachCeleryPoint;
     public Transform attachCherryPoint;
     public Transform attachLemonPoint;
+    public Transform attachIcePoint;
+    public Transform attachMintPoint;
+    public Transform attachOrangePoint;
 
     public Dictionary<string, ObjectInfo> objectsCup = new Dictionary<string, ObjectInfo>();
 
@@ -39,9 +42,10 @@ public class Cup : MonoBehaviour
         Dictionary<string, Transform> attachPoints = new Dictionary<string, Transform>
         {
             { "Celery", attachCeleryPoint },
-            { "OrangeSlice", null },
+            { "OrangeSlice", attachOrangePoint },
             { "LemonSlice", attachLemonPoint },
-            { "Mint", null },
+            { "Mint", attachMintPoint },
+            { "Ice", attachIcePoint },
             { "Cherry", attachCherryPoint },
             { "Sugar", null}
         };
@@ -161,7 +165,9 @@ public class Cup : MonoBehaviour
         BoxCollider boxCollider = objectToAttach.GetComponent<BoxCollider>();
         if (boxCollider != null)
         {
-            boxCollider.isTrigger = true;
+            // boxCollider.isTrigger = true;
+            Destroy(boxCollider);
+
         }
 
         objectToAttach.transform.parent = attachPoint;
