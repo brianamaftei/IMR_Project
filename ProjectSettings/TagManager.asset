@@ -19,6 +19,8 @@ TagManager:
   - Champagne
   - Old
   - Juicer
+  - SugarCane
+  - Sugar
   layers:
   - Default
   - TransparentFX

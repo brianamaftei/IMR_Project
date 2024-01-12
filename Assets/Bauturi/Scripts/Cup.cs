@@ -42,8 +42,8 @@ public class Cup : MonoBehaviour
             { "OrangeSlice", null },
             { "LemonSlice", attachLemonPoint },
             { "Mint", null },
-            { "Lime", null },
-            { "Cherry", attachCherryPoint }
+            { "Cherry", attachCherryPoint },
+            { "Sugar", null}
         };
 
         if (attachPoints.ContainsKey(objectName))
@@ -55,7 +55,10 @@ public class Cup : MonoBehaviour
             }
             else
             {
-                AttachObjectToCup(attachPoints[objectName], objectInCup);
+                if (objectName != "Sugar")
+                   { 
+                       AttachObjectToCup(attachPoints[objectName], objectInCup);
+                   }
                 objectsCup.Add(objectName, new ObjectInfo(objectName, 1, objectInCup));
                 Debug.Log("It was added " + objectName + " into the glass");
             }
