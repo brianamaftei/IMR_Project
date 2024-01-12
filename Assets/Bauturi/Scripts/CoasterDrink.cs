@@ -7,9 +7,10 @@ public class CoasterDrink : MonoBehaviour
 {
     private Dictionary<string, ObjectInfo> ObjectsInCup;
     private GameObject DrinkObject;
-    private List<string> TargetTags = new List<string> { "Poco", "Zombie" };
+    public GameObject[] prefabArray;
+    private List<string> TargetTags = new List<string> { "Poco", "Zombie", "Old", "Margarita", "Martini", "Champagne" };
+
     public ScorePoints sp;
-    public GameObject zombiePrefab, pocoPrefab;
 
     public void ReceiveCollisionInfo(Dictionary<string, ObjectInfo> objects, GameObject collidedObj)
     {
@@ -44,19 +45,21 @@ public class CoasterDrink : MonoBehaviour
 
         }
     }
+
     private void CreateEmptyGlass(string glassTag, Vector3 spawnPosition)
     {
+        List<GameObject> prefabsList =  new List<GameObject>(prefabArray);
+        GameObject selectedPrefab = prefabsList.Find(prefab => prefab.tag == glassTag);
 
-        if (glassTag == "Zombie")
+        if (selectedPrefab != null)
         {
             spawnPosition.x -= 0.5f;
-            Instantiate(zombiePrefab, spawnPosition, Quaternion.identity);
+            Instantiate(selectedPrefab, spawnPosition, Quaternion.identity);
         }
-        else if (glassTag == "Poco")
+        else
         {
-            spawnPosition.x -= 0.5f;
-            Instantiate(pocoPrefab, spawnPosition, Quaternion.identity);
-        }    
+            Debug.LogError("Prefab with tag " + glassTag + " not found in the list");
+        } 
     }
 
     public GameObject GetDrinkObject()

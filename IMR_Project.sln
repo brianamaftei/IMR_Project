@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Unity.XR.Interaction.Toolki
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Unity.XR.Interaction.Toolkit.Samples.StarterAssets.Editor", "Unity.XR.Interaction.Toolkit.Samples.StarterAssets.Editor.csproj", "{D8F072E6-66C7-1B31-7F89-8261217457B1}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AdjustPivot.Editor", "AdjustPivot.Editor.csproj", "{04B42135-6EC7-7780-3B44-2A601EEE3E77}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -31,6 +33,10 @@ Global
 		{D8F072E6-66C7-1B31-7F89-8261217457B1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D8F072E6-66C7-1B31-7F89-8261217457B1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D8F072E6-66C7-1B31-7F89-8261217457B1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{04B42135-6EC7-7780-3B44-2A601EEE3E77}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{04B42135-6EC7-7780-3B44-2A601EEE3E77}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{04B42135-6EC7-7780-3B44-2A601EEE3E77}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{04B42135-6EC7-7780-3B44-2A601EEE3E77}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
