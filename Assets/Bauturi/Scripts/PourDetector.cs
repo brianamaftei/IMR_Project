@@ -85,6 +85,11 @@ public class PourDetector : MonoBehaviour
         return albedoColor;
     }
 
+    private void SetPourColor(Color color)
+    {
+        liquid.color = color;
+    }
+
     private void OnCollisionEnter(Collision collision)
     {
         if (gameObject.CompareTag("Juicer"))
@@ -92,6 +97,19 @@ public class PourDetector : MonoBehaviour
             if (collision.gameObject.CompareTag("Lime"))
             {
                 isPouring = true;
+                SetPourColor(new Color(0.2f, 0.94f, 0.0f));
+                StartPour();
+            }
+            else if (collision.gameObject.CompareTag("Lemon"))
+            {
+                isPouring = true;
+                SetPourColor(new Color(0.89f, 1.0f, 0.0f));
+                StartPour();
+            }
+            else if (collision.gameObject.CompareTag("Orange"))
+            {
+                isPouring = true;
+                SetPourColor(new Color(1.0f, 0.67f, 0.0f));
                 StartPour();
             }
         }
@@ -101,7 +119,7 @@ public class PourDetector : MonoBehaviour
     {
         if (gameObject.CompareTag("Juicer"))
         {
-            if (collision.gameObject.CompareTag("Lime"))
+            if (collision.gameObject.CompareTag("Lime") || collision.gameObject.CompareTag("Lemon") || collision.gameObject.CompareTag("Orange"))
             {
                 isPouring = false;
                 EndPour();
