@@ -3,7 +3,37 @@ guid: 76413ff6a98032740ae7c0dfcae20bef
 ModelImporter:
   serializedVersion: 21300
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Bottiglia
+    second: {fileID: 2100000, guid: 8271f3814e3365b47a707c1fa8c2c428, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Liquido
+    second: {fileID: 2100000, guid: 7782a85ee3cf3bb4fb1779723da58951, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: "PlaticoCura\xE7auDourado"
+    second: {fileID: 2100000, guid: 068147ac16a9b89448363fed1245584b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: "RotuloCura\xE7au"
+    second: {fileID: 2100000, guid: 2295491b1aa7c7844aa6f6a500063815, type: 2}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Rum-main__68952
+    second: {fileID: 2800000, guid: 8689a2c7d2e00374a86c2fc357993776, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Tex-Cocanero
+    second: {fileID: 2800000, guid: 396b4a58eb878154a95ae1e75df5c994, type: 3}
   materials:
     materialImportMode: 2
     materialName: 0
