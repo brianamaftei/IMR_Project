@@ -58,7 +58,7 @@ public class CoasterDrink : MonoBehaviour
         }
         else
         {
-            Debug.LogError("Prefab with tag " + glassTag + " not found in the list");
+            Debug.LogWarning("Prefab with tag " + glassTag + " not found in the list");
         } 
     }
 

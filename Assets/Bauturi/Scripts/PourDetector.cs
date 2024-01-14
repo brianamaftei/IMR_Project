@@ -92,7 +92,7 @@ public class PourDetector : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        if (gameObject.CompareTag("Juicer"))
+        if (gameObject.CompareTag("Juicer") && isPouring == false)
         {
             if (collision.gameObject.CompareTag("Lime"))
             {
@@ -105,7 +105,7 @@ public class PourDetector : MonoBehaviour
                 isPouring = true;
                 SetPourColor(new Color(0.89f, 1.0f, 0.0f));
                 StartPour();
-            }
+            } 
             else if (collision.gameObject.CompareTag("Orange"))
             {
                 isPouring = true;
@@ -117,13 +117,14 @@ public class PourDetector : MonoBehaviour
 
     private void OnCollisionExit(Collision collision)
     {
-        if (gameObject.CompareTag("Juicer"))
+        if (gameObject.CompareTag("Juicer") && isPouring == true)
         {
             if (collision.gameObject.CompareTag("Lime") || collision.gameObject.CompareTag("Lemon") || collision.gameObject.CompareTag("Orange"))
             {
                 isPouring = false;
                 EndPour();
             }
+            
         }
     }
 

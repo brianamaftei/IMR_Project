@@ -52,7 +52,7 @@ public class ScorePoints : MonoBehaviour
     {
         newScore += UpdateValue(objects);
         scoreBoard.text = $"Score: {score + newScore}";
-        if (newScore >= 1500 + dayCounter * 100)
+        if (newScore >= -1000)//1500 + dayCounter * 100)
             {
                 PlayerPrefs.SetString("GameState", "Night");
                 score += newScore;
@@ -141,7 +141,7 @@ public class ScorePoints : MonoBehaviour
             string oldState = PlayerPrefs.GetString("ClientsLeft");
             if (oldState == "False")
             {
-                if (newPoints >= 1)///>= 1500 + dayCounter * 100)
+                if (newPoints >= -1000)///>= 1500 + dayCounter * 100)
                 {
                     rs.GetComponent<RewardScreen>().ActivateCanvas();
                 }
