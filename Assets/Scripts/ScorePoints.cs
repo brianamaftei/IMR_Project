@@ -34,25 +34,147 @@ public class ScorePoints : MonoBehaviour
     private void Start()
     {   
         Debug.Log("Start method called in ScorePoints");
-        Dictionary<string, float> recipe = new Dictionary<string, float>();
-        recipe.Add("RGBA(0.898, 0.220, 0.137, 1.000)", 0.8f);
-        recipe.Add("RGBA(0.851, 0.855, 0.851, 1.000)", 0.2f);
-        recipe.Add("Celery", 1f);
+        Dictionary<string, float> recipe = new Dictionary<string, float>
+        {
+            { "RGBA(0.898, 0.220, 0.137, 1.000)", 0.8f },
+            { "RGBA(0.851, 0.855, 0.851, 1.000)", 0.2f },
+            { "Celery", 1f },
+            { "Zombie", 1f }
+        };
         recipes.Add("Bloody Mary", recipe);
 
-        recipe = new Dictionary<string, float>();
-        recipe.Add("RGBA(0.969, 0.949, 0.655, 1.000)", 0.25f);
-        recipe.Add("RGBA(0.957, 0.847, 0.467, 1.000)", 0.25f);
-        recipe.Add("RGBA(0.706, 0.886, 0.843, 1.000)", 0.5f);
-        recipe.Add("Cherry", 1f);
+        recipe = new Dictionary<string, float>
+        {
+            { "RGBA(0.969, 0.949, 0.655, 1.000)", 0.25f },
+            { "RGBA(0.957, 0.847, 0.467, 1.000)", 0.25f },
+            { "RGBA(0.706, 0.886, 0.843, 1.000)", 0.5f },
+            { "Cherry", 1f },
+            { "Poco", 1f }
+        };
         recipes.Add("Pina Colada", recipe);
+
+        recipe = new Dictionary<string, float>
+        {
+            { "RGBA(0.925, 0.925, 0.890, 1.000)", 0.3f },
+            { "RGBA(0.741, 0.741, 0.737, 1.000)", 0.7f },
+            { "Ice", 1f },
+            { "Old", 1f }
+        };
+        recipes.Add("Gin Tonic", recipe);
+
+        recipe = new Dictionary<string, float>
+        {
+            { "RGBA(0.702, 0.878, 0.835, 1.000)", 0.33f },
+            { "RGBA(0.925, 0.925, 0.890, 1.000)", 0.33f },
+            { "RGBA(0.890, 1.000, 0.000, 1.000)", 0.34f },
+            { "Margarita", 1f }
+        };
+        recipes.Add("White Lady", recipe);
+
+        recipe = new Dictionary<string, float>
+        {
+            { "RGBA(0.741, 0.741, 0.737, 1.000)", 0.8f },
+            { "RGBA(0.906, 0.467, 0.243, 1.000)", 0.2f },
+            { "Mint", 1f },
+            { "Sugar", 1f },
+            { "Zombie", 1f }
+        };
+        recipes.Add("Mint Julep", recipe);
+
+        recipe = new Dictionary<string, float>
+        {
+            { "RGBA(1.000, 0.670, 0.000, 1.000)", 0.25f },
+            { "RGBA(0.937, 0.439, 0.310, 1.000)", 0.25f },
+            { "RGBA(0.398, 0.110, 0.039, 1.000)", 0.5f },
+            { "OrangeSlice", 1f },
+            { "Poco", 1f }
+        };
+        recipes.Add("Tequila Sunrise", recipe);
+
+        recipe = new Dictionary<string, float>
+        {
+            { "RGBA(0.851, 0.855, 0.851, 1.000)", 0.2f },
+            { "RGBA(0.200, 0.940, 0.000, 1.000)", 0.2f },
+            { "RGBA(0.765, 0.000, 0.078, 0.525)", 0.3f },
+            { "RGBA(0.702, 0.878, 0.835, 1.000)", 0.2f },
+            { "Martini", 1f }
+        };
+        recipes.Add("Cosmopolitan", recipe);
+
+        recipe = new Dictionary<string, float>
+        {
+            { "RGBA(0.200, 0.940, 0.000, 0.525)", 0.5f },
+            { "RGBA(0.925, 0.925, 0.890, 1.000)", 0.5f },
+            { "Martini", 1f }
+        };
+        recipes.Add("Gimlet", recipe);
+
+        recipe = new Dictionary<string, float>
+        {
+            { "RGBA(0.494, 0.270, 0.341, 1.000)", 0.3f },
+            { "RGBA(0.710, 0.149, 0.118, 1.000)", 0.5f },
+            { "RGBA(0.925, 0.925, 0.890, 1.000)", 0.2f },
+            { "Old", 1f }
+        };
+        recipes.Add("Negroni", recipe);
+
+        recipe = new Dictionary<string, float>
+        {
+            { "RGBA(0.398, 0.110, 0.039, 1.000)", 0.6f },
+            { "RGBA(0.890, 1.000, 0.000, 1.000)", 0.4f },
+            { "Margarita", 1f }
+        };
+        recipes.Add("Margarita", recipe);
+
+        recipe = new Dictionary<string, float>
+        {
+            { "RGBA(0.962, 0.140, 0.221, 1.000)", 0.3f },
+            { "RGBA(0.765, 0.000, 0.078, 1.000)", 0.5f },
+            { "RGBA(0.773, 0.868, 0.841, 1.000)", 0.2f },
+            { "Old", 1f }
+        };
+        recipes.Add("Hot Rod", recipe);
+
+        recipe = new Dictionary<string, float>
+        {
+            { "RGBA(0.008, 0.866, 0.000, 1.000)", 0.6f },
+            { "RGBA(0.992, 0.859, 0.518, 1.000)", 0.4f },
+            { "Champagne", 1f }
+        };
+        recipes.Add("The Ghost", recipe);
+
+        recipe = new Dictionary<string, float>
+        {
+            { "RGBA(1.000, 0.670, 0.000, 1.000)", 0.3f },
+            { "RGBA(0.765, 0.000, 0.078, 1.000)", 0.2f },
+            { "RGBA(0.973, 0.788, 0.196, 1.000)", 0.2f },
+            { "RGBA(0.851, 0.855, 0.851, 1.000)", 0.3f },
+            { "OrangeSlice", 1f },
+            { "Poco", 1f }
+        };
+        recipes.Add("Sex On THe Beach", recipe);
+
+        recipe = new Dictionary<string, float>
+        {
+            { "RGBA(0.827, 0.906, 0.490, 1.000)", 0.15f },
+            { "RGBA(0.702, 0.878, 0.835, 1.000)", 0.15f },
+            { "RGBA(0.925, 0.925, 0.890, 1.000)", 0.15f },
+            { "RGBA(0.851, 0.855, 0.851, 1.000)", 0.15f },
+            { "RGBA(0.953, 0.953, 0.953, 1.000)", 0.15f },
+            { "RGBA(0.398, 0.110, 0.039, 1.000)", 0.15f },
+            { "RGBA(0.227, 0.122, 0.110, 1.000)", 0.1f },
+            { "LemonSlice", 1f },
+            { "Ice", 1f },
+            { "Zombie", 1f }
+        };
+        recipes.Add("Long Island Ice Tea", recipe);
     }
 
-    public void UpdateScore(Dictionary<string, ObjectInfo> objects)
+    public void UpdateScore(Dictionary<string, ObjectInfo> objects, string glassTag)
     {
-        newScore += UpdateValue(objects);
+        newScore += UpdateValue(objects, glassTag);
         scoreBoard.text = $"Score: {score + newScore}";
-        if (newScore >= -1000)//1500 + dayCounter * 100)
+        if (newScore >= 1000 + dayCounter * 150)
             {
                 PlayerPrefs.SetString("GameState", "Night");
                 score += newScore;
@@ -132,16 +254,16 @@ public class ScorePoints : MonoBehaviour
     }
 
 
-    public void UpdatePoints(Dictionary<string, ObjectInfo> objects)
+    public void UpdatePoints(Dictionary<string, ObjectInfo> objects, string glassTag)
     {
-        newPoints += UpdateValue(objects);
+        newPoints += UpdateValue(objects, glassTag);
         scoreBoard.text = $"Points: {points + newPoints}";
         if (PlayerPrefs.HasKey("ClientsLeft"))
         {
             string oldState = PlayerPrefs.GetString("ClientsLeft");
             if (oldState == "False")
             {
-                if (newPoints >= -1000)///>= 1500 + dayCounter * 100)
+                if (newPoints >= 1000 + dayCounter * 150)
                 {
                     rs.GetComponent<RewardScreen>().ActivateCanvas();
                 }
@@ -159,7 +281,7 @@ public class ScorePoints : MonoBehaviour
         NextRecipe();       
 
     }
-    private float UpdateValue(Dictionary<string, ObjectInfo> objects)
+    private float UpdateValue(Dictionary<string, ObjectInfo> objects, string glassTag)
     {
         float val = 0f;
         var recipe = recipes[selectedRecipe.text];
@@ -204,6 +326,10 @@ public class ScorePoints : MonoBehaviour
             {
                 val -= 50f;
             }
+        }
+        if (recipe.ContainsKey(glassTag))
+        {
+            val += 50f;
         }
         return val;
     }

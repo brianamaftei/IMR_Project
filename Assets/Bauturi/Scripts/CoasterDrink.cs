@@ -35,9 +35,9 @@ public class CoasterDrink : MonoBehaviour
                 {
                     string oldState = PlayerPrefs.GetString("GameState");
                     if (oldState == "Day")
-                        sp.UpdateScore(ObjectsInCup);
+                        sp.UpdateScore(ObjectsInCup, collidedObj.tag);
                     else
-                        sp.UpdatePoints(ObjectsInCup);
+                        sp.UpdatePoints(ObjectsInCup, collidedObj.tag);
                 }
                 CreateEmptyGlass(collidedObj.tag, DrinkObject.transform.position);
                 Destroy(DrinkObject); 
@@ -53,7 +53,8 @@ public class CoasterDrink : MonoBehaviour
 
         if (selectedPrefab != null)
         {
-            spawnPosition.x -= 0.5f;
+            //Vector3 prefabScale = selectedPrefab.transform.localScale;
+            spawnPosition.x -= 0.7f; //* prefabScale.x;
             Instantiate(selectedPrefab, spawnPosition, Quaternion.identity);
         }
         else

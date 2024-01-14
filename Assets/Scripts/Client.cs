@@ -41,10 +41,10 @@ public class Client : MonoBehaviour
         System.Array.Copy(coasterDrinkComponent.prefabArray, copyPrefabArray, coasterDrinkComponent.prefabArray.Length);
         ScorePoints sp = coasterDrinkComponent.sp;
 
-        if(coasterDrinkComponent != null)
-        {
-            Destroy(coasterDrinkComponent);
-        }
+        //if(coasterDrinkComponent != null)
+        //{
+          //  Destroy(coasterDrinkComponent);
+        //}
 
         Transform transformClient = currentClientObject.transform;
         
@@ -65,13 +65,13 @@ public class Client : MonoBehaviour
 
             ShowBubbleText();
 
-            if(coasterDrinkComponent == null)
-            {
-                CoasterDrink coasterDrinkComponent = coaster.AddComponent<CoasterDrink>();
-                System.Array.Copy(copyPrefabArray, coasterDrinkComponent.prefabArray, copyPrefabArray.Length);
-                coasterDrinkComponent.sp = sp;
-                Debug.Log("aiciiiii");
-            }
+           // if(coasterDrinkComponent == null)
+           // {
+             //   CoasterDrink coasterDrinkComponent = coaster.AddComponent<CoasterDrink>();
+               // System.Array.Copy(copyPrefabArray, coasterDrinkComponent.prefabArray, copyPrefabArray.Length);
+                //coasterDrinkComponent.sp = sp;
+                //Debug.Log("aiciiiii");
+           // }
 
            
 
