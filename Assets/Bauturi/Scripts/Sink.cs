@@ -48,7 +48,7 @@ public class Sink : MonoBehaviour
                 }
             }
 
-            Debug.DrawRay(pivotPosition, Vector3.down * 0.4f, Color.red, 3f);
+            // Debug.DrawRay(pivotPosition, Vector3.down * 0.4f, Color.red, 3f);
 
         }
         else
