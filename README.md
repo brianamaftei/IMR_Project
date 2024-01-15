@@ -19,12 +19,13 @@ Features:
 - walk / grab / interactables
 - scor: evaluarea corectitudinii retetei (cat de apropiat e de reteta selectata)
 - states zi / noapte
-- functionalitati lichid (curgere + amestecare) *
-- functionalitate ingrediente solide *
+- functionalitati lichid (curgere + amestecare)
+- functionalitate ingrediente solide
+- functionalitate golire pahar
 - functionalitate noapte: 
   - venire clienti
   - comenzi
   - punctaje: same as scor
   - rewards la finalul noptii. if no rewards available : win
   - diploma final  
-*2 retete complet functionale
+*toate retetele complet functionale
