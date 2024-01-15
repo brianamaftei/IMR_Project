@@ -6,11 +6,11 @@ using UnityEngine.XR.Interaction.Toolkit;
 
 public class Cup : MonoBehaviour
 {
-    private Renderer liquidRenderer;  
-    private float currentFillLevel = 0.0f;
+    public Renderer liquidRenderer;  
+    public float currentFillLevel = 0.0f;
     private BoxCollider boxCollider;
 
-    private Vector3 originalColliderSize; 
+    public Vector3 originalColliderSize; 
     public Color liquidColor;
     private Color initialColor;
     public Transform attachCeleryPoint;
@@ -69,7 +69,7 @@ public class Cup : MonoBehaviour
         }
     }
 
-    private void AddObjectToCup(string objectName, ObjectInfo objectInfo)
+    public void AddObjectToCup(string objectName, ObjectInfo objectInfo)
     {
         Debug.Log("add object");
         objectsCup[objectName] = objectInfo;

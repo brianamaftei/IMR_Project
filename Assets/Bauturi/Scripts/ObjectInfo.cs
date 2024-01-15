@@ -17,7 +17,7 @@ public class ObjectInfo
         InitialiseColorHistory(tag, initialFillLevel, color);
     }
 
-    private void InitialiseColorHistory(string name, float fillLevel, Color initialColor)
+    public void InitialiseColorHistory(string name, float fillLevel, Color initialColor)
     {
         if (name == "Liquids")
         {

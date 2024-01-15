@@ -12,9 +12,12 @@ public class CoasterDrink : MonoBehaviour
 
     public ScorePoints sp;
 
+    public bool doCollision = true;
+
+
     public void ReceiveCollisionInfo(Dictionary<string, ObjectInfo> objects, GameObject collidedObj)
     {
-        if (TargetTags.Contains(collidedObj.tag))
+        if (TargetTags.Contains(collidedObj.tag) && doCollision)
         {
             Debug.Log("Collision with a drink");
 

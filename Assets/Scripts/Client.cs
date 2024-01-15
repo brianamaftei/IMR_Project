@@ -35,50 +35,32 @@ public class Client : MonoBehaviour
 
     void MoveOnPath()
     {
+        
         GameObject coaster= GameObject.Find("Drink Coaster");
         CoasterDrink coasterDrinkComponent = coaster.GetComponent<CoasterDrink>();
-        GameObject[] copyPrefabArray = new GameObject[coasterDrinkComponent.prefabArray.Length];
-        System.Array.Copy(coasterDrinkComponent.prefabArray, copyPrefabArray, coasterDrinkComponent.prefabArray.Length);
-        ScorePoints sp = coasterDrinkComponent.sp;
-
-        //if(coasterDrinkComponent != null)
-        //{
-          //  Destroy(coasterDrinkComponent);
-        //}
-
-        Transform transformClient = currentClientObject.transform;
+        coasterDrinkComponent.doCollision = false;
         
+        Transform transformClient = currentClientObject.transform;
+
         Vector3[] pathPositions = new Vector3[pathPoints.Length];
         for (int i = 0; i < pathPoints.Length; i++)
         {
             pathPositions[i] = pathPoints[i].position;
         }
-        
-       
+               
         Tween t = transformClient.DOPath(pathPositions, duration, PathType.Linear)
             .SetOptions(false);     
 
         t.OnComplete(() =>
         {
             currentClientObject.transform.Rotate(Vector3.up, -90.0f);
-                
 
             ShowBubbleText();
 
-           // if(coasterDrinkComponent == null)
-           // {
-             //   CoasterDrink coasterDrinkComponent = coaster.AddComponent<CoasterDrink>();
-               // System.Array.Copy(copyPrefabArray, coasterDrinkComponent.prefabArray, copyPrefabArray.Length);
-                //coasterDrinkComponent.sp = sp;
-                //Debug.Log("aiciiiii");
-           // }
-
-           
-
+            coasterDrinkComponent.doCollision = true;         
         });
 
     }
-
 
     void ShowBubbleText()
     {           
