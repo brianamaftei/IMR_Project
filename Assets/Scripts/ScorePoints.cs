@@ -9,7 +9,11 @@ using System.Linq;
 
 public class ScorePoints : MonoBehaviour
 {
-    public GameObject rs;
+    private AudioSource soundManger;
+    public AudioClip soundFail;
+    public AudioClip soundSuccess;
+    public HandleGameState gameState;
+    public RewardScreen rs;
     public TextMeshProUGUI scoreBoard;
     public TextMeshProUGUI selectedRecipe; 
     private Dictionary<string, Dictionary<string, float>> recipes = new Dictionary<string, Dictionary<string, float>>();
@@ -32,7 +36,8 @@ public class ScorePoints : MonoBehaviour
 
 
     private void Start()
-    {   
+    {
+        soundManger = GetComponent<AudioSource>();
         Debug.Log("Start method called in ScorePoints");
         Dictionary<string, float> recipe = new Dictionary<string, float>
         {
@@ -152,7 +157,7 @@ public class ScorePoints : MonoBehaviour
             { "OrangeSlice", 1f },
             { "Poco", 1f }
         };
-        recipes.Add("Sex On THe Beach", recipe);
+        recipes.Add("Sex On The Beach", recipe);
 
         recipe = new Dictionary<string, float>
         {
@@ -174,14 +179,17 @@ public class ScorePoints : MonoBehaviour
     {
         newScore += UpdateValue(objects, glassTag);
         scoreBoard.text = $"Score: {score + newScore}";
-        if (newScore >= 1000 + dayCounter * 150)
+        if (PlayerPrefs.HasKey("GameState"))
+        {
+            string oldState = PlayerPrefs.GetString("GameState");
+            if (oldState == "Day" && newScore >= 1000 + dayCounter * 150)
             {
-                PlayerPrefs.SetString("GameState", "Night");
+                gameState.SwitchGameState();
                 score += newScore;
                 newScore = 0;
                 StartingTheNight();
             }
-
+        }
     }
     
     List<GameObject> GenerateRecipeList(int numberOfRecipes)
@@ -258,28 +266,31 @@ public class ScorePoints : MonoBehaviour
     {
         newPoints += UpdateValue(objects, glassTag);
         scoreBoard.text = $"Points: {points + newPoints}";
+        currentClient.DestroyClient();
+        NextRecipe();
         if (PlayerPrefs.HasKey("ClientsLeft"))
         {
             string oldState = PlayerPrefs.GetString("ClientsLeft");
+            print(oldState);
             if (oldState == "False")
             {
                 if (newPoints >= 1000 + dayCounter * 150)
                 {
-                    rs.GetComponent<RewardScreen>().ActivateCanvas();
+                    soundManger.clip = soundSuccess;
+                    soundManger.Play();
+                    rs.ActivateCanvas();
                 }
                 else
                 {
-                    PlayerPrefs.SetString("GameState", "Day");
+                    soundManger.clip = soundFail;
+                    soundManger.Play();
+                    gameState.SwitchGameState();
                 }
                 dayCounter += 1;
                 points += newPoints;
                 newPoints = 0;
             }
         }
-
-        currentClient.DestroyClient(); 
-        NextRecipe();       
-
     }
     private float UpdateValue(Dictionary<string, ObjectInfo> objects, string glassTag)
     {

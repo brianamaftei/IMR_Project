@@ -9,18 +9,22 @@ public class CoasterDrink : MonoBehaviour
     private GameObject DrinkObject;
     public GameObject[] prefabArray;
     private List<string> TargetTags = new List<string> { "Poco", "Zombie", "Old", "Margarita", "Martini", "Champagne" };
-
+    private AudioSource soundManager;
     public ScorePoints sp;
 
     public bool doCollision = true;
 
+    private void Start()
+    {
+        soundManager = GetComponent<AudioSource>();
+    }
 
     public void ReceiveCollisionInfo(Dictionary<string, ObjectInfo> objects, GameObject collidedObj)
     {
         if (TargetTags.Contains(collidedObj.tag) && doCollision)
         {
+            doCollision = false;
             Debug.Log("Collision with a drink");
-
             ObjectsInCup = objects;
             DrinkObject = collidedObj;
 
@@ -42,9 +46,15 @@ public class CoasterDrink : MonoBehaviour
                     else
                         sp.UpdatePoints(ObjectsInCup, collidedObj.tag);
                 }
+                else
+                {
+                    sp.UpdateScore(ObjectsInCup, collidedObj.tag);
+                }
                 CreateEmptyGlass(collidedObj.tag, DrinkObject.transform.position);
-                Destroy(DrinkObject); 
+                Destroy(DrinkObject);
+                soundManager.Play();
             }
+            doCollision = true;
 
         }
     }

@@ -19,11 +19,13 @@ public class Cup : MonoBehaviour
     public Transform attachIcePoint;
     public Transform attachMintPoint;
     public Transform attachOrangePoint;
+    private AudioSource soundManager;
 
     public Dictionary<string, ObjectInfo> objectsCup = new Dictionary<string, ObjectInfo>();
 
     public void Start()
     {
+        soundManager = GetComponent<AudioSource>();
         GameObject cupObject = gameObject;
         liquidRenderer = GetComponent<Renderer>();
         boxCollider = GetComponent<BoxCollider>();
@@ -52,6 +54,7 @@ public class Cup : MonoBehaviour
 
         if (attachPoints.ContainsKey(objectName))
         {
+            soundManager.Play();
             if (objectsCup.ContainsKey(objectName))
             {
                 objectsCup[objectName].numberOfObjects++;

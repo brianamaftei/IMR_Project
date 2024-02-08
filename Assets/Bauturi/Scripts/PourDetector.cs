@@ -6,12 +6,17 @@ public class PourDetector : MonoBehaviour
     public int pourThreshold = 45;
     public Transform origin = null;
     public GameObject streamPrefab = null;
+    private AudioSource soundManager;
 
     private bool isPouring = false;
     private Stream currentStream = null;
 
     [SerializeField]
     private Material liquid;
+    private void Start()
+    {
+        soundManager = GetComponent<AudioSource>();
+    }
 
     private void Update()
     {
@@ -44,7 +49,7 @@ public class PourDetector : MonoBehaviour
         print("Start Pouring");
         currentStream = CreateStream();
         currentStream.liquidColor = ColorOfMaterial();
-
+        soundManager.Play();
         if (currentStream != null)
         {
             currentStream.Begin();
@@ -57,6 +62,7 @@ public class PourDetector : MonoBehaviour
     private void EndPour()
     {
         print("End Pouring");
+        soundManager.Stop();
         currentStream.End();
         currentStream = null;
     }

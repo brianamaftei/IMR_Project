@@ -18,9 +18,12 @@ public class Client : MonoBehaviour
     public Transform[] pathPoints;
     private Transform[] initialPathPoints;
     public float duration = 5f;
+    private AudioSource soundManager;
 
     public void SpawnClient()
     {
+        soundManager = GetComponent<AudioSource>();
+        soundManager.Play();
         int randomIndex = Random.Range(0, clientPrefabs.Count);
         
         GameObject randomClientPrefab = clientPrefabs[randomIndex];

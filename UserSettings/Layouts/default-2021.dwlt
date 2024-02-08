@@ -19,7 +19,7 @@ MonoBehaviour:
     width: 1536
     height: 780.8
   m_ShowMode: 4
-  m_Title: Scene
+  m_Title: Game
   m_RootView: {fileID: 2}
   m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
@@ -119,7 +119,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 200}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 0
-  controlID: 132
+  controlID: 17
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -144,7 +144,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 200}
   m_MaxSize: {x: 16192, y: 16192}
   vertical: 1
-  controlID: 133
+  controlID: 18
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -169,7 +169,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 100}
   m_MaxSize: {x: 16192, y: 8096}
   vertical: 0
-  controlID: 134
+  controlID: 19
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -189,8 +189,8 @@ MonoBehaviour:
     y: 0
     width: 262.4
     height: 468.8
-  m_MinSize: {x: 200, y: 200}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 201, y: 221}
+  m_MaxSize: {x: 4001, y: 4021}
   m_ActualView: {fileID: 13}
   m_Panes:
   - {fileID: 13}
@@ -536,9 +536,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: -3.6330917, y: 0.839977, z: 0.33642238}
+    m_Target: {x: -0.97143686, y: 1.6423273, z: 1.8375505}
     speed: 2
-    m_Value: {x: -3.6330917, y: 0.839977, z: 0.33642238}
+    m_Value: {x: -0.97143686, y: 1.6423273, z: 1.8375505}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -585,13 +585,13 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
-    m_Target: {x: 0.20427628, y: 0.23769538, z: -0.05220869, w: 0.9483317}
+    m_Target: {x: 0.08631489, y: -0.014044524, z: 0.00027143, w: 0.99632746}
     speed: 2
-    m_Value: {x: 0.21135244, y: 0.2372629, z: -0.05398315, w: 0.9466374}
+    m_Value: {x: 0.08630125, y: -0.014042306, z: 0.00027138714, w: 0.9961701}
   m_Size:
-    m_Target: 2.5720854
+    m_Target: 0.9161219
     speed: 2
-    m_Value: 2.5720854
+    m_Value: 0.9161219
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -647,10 +647,10 @@ MonoBehaviour:
     m_OverlaysVisible: 1
   m_SceneHierarchy:
     m_TreeViewState:
-      scrollPos: {x: 0, y: 392}
-      m_SelectedIDs: 506affff
-      m_LastClickedID: -38320
-      m_ExpandedIDs: 2aadffffb0baffff06e4ffff20f0ffffb0f5ffff34fbffff4c6a0000a06a0000746b0000aa6b0000ba6b0000886c0000a86c0000e06c0000f26c00002c6d0000466d0000666d0000966d0000b86d0000c66d0000ce6d0000846e0000a86e0000b66e0000366f0000f66f000000700000747000009e700000
+      scrollPos: {x: 0, y: 0}
+      m_SelectedIDs: 88630300
+      m_LastClickedID: 222088
+      m_ExpandedIDs: 5860fdfff066fdff94e3fdffca22feff9a74feff448cfeff948cfeffc8d6feff1400ffff568bffffd08fffff6890ffff0ea2ffff68dcffff2afbffff868c0000928c0000d48c0000e08c00004e8d0000528d0000d4930000d6930000ec930000e09400004a950000e6950000109600004a960000aa990000529a0000bee50000e8e5000032e6000036e600006c0f010070100100c4d801001463030036630300
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -708,7 +708,7 @@ MonoBehaviour:
   m_SerializedViewValues:
   - D:\Informatica\IMR\Proiect\IMR_Project\Library\PlayModeViewStates\60f43f445dc15784c9108f0f691142c7
   m_PlayModeViewName: GameView
-  m_ShowGizmos: 1
+  m_ShowGizmos: 0
   m_TargetDisplay: 0
   m_ClearColor: {r: 0, g: 0, b: 0, a: 0}
   m_TargetSize: {x: 940.4, y: 426.8}
@@ -718,7 +718,7 @@ MonoBehaviour:
   m_EnterPlayModeBehavior: 0
   m_UseMipMap: 0
   m_VSyncEnabled: 0
-  m_Gizmos: 1
+  m_Gizmos: 0
   m_Stats: 0
   m_SelectedSizes: 00000000000000000000000000000000000000000000000000000000000000000000000000000000
   m_ZoomArea:
@@ -874,23 +874,23 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Bauturi/materials
+    - Assets/Scenes
     m_Globs: []
     m_OriginalText: 
     m_FilterByTypeIntersection: 0
   m_ViewMode: 1
   m_StartGridSize: 96
   m_LastFolders:
-  - Assets/Bauturi/materials
+  - Assets/Scenes
   m_LastFoldersGridSize: 96
-  m_LastProjectPath: C:\Users\pinza\Documents\GitHub\IMR_Project
+  m_LastProjectPath: D:\Informatica\IMR\Proiect\IMR_Project
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 23}
-    m_SelectedIDs: 788a0000
-    m_LastClickedID: 35448
-    m_ExpandedIDs: 00000000468a0000488a00004a8a00004c8a00004e8a0000508a0000528a0000548a0000568a000000ca9a3b
+    scrollPos: {x: 0, y: 359}
+    m_SelectedIDs: 4a8b0000
+    m_LastClickedID: 35658
+    m_ExpandedIDs: 00000000728a0000348b00003c8b000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -918,7 +918,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000468a0000488a00004a8a00004c8a00004e8a0000508a0000528a0000548a0000568a0000
+    m_ExpandedIDs: 00000000728a0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -945,7 +945,7 @@ MonoBehaviour:
   m_ListAreaState:
     m_SelectedInstanceIDs: 
     m_LastClickedInstanceID: 0
-    m_HadKeyboardFocusLastEvent: 1
+    m_HadKeyboardFocusLastEvent: 0
     m_ExpandedInstanceIDs: c62300004c79000082a00000c4af00007caf0000c2af0000b8090100ba3102004c0a01009c7400004e500200083202008c9a00001600000024e400003c930000a2930000d2890000f689000000000000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -962,7 +962,7 @@ MonoBehaviour:
       m_IsRenaming: 0
       m_OriginalEventType: 11
       m_IsRenamingFilename: 1
-      m_ClientGUIView: {fileID: 10}
+      m_ClientGUIView: {fileID: 9}
     m_CreateAssetUtility:
       m_EndAction: {fileID: 0}
       m_InstanceID: 0
@@ -970,7 +970,7 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
     m_NewAssetIndexInList: -1
-    m_ScrollPosition: {x: 0, y: 226}
+    m_ScrollPosition: {x: 0, y: 0}
     m_GridSize: 96
   m_SkipHiddenPackages: 0
   m_DirectoriesAreaWidth: 207
@@ -994,10 +994,10 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 7.2000003
-    y: 468.80002
-    width: 1035.8
-    height: 307.40002
+    x: 0
+    y: 542.4
+    width: 1203.8
+    height: 241
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default

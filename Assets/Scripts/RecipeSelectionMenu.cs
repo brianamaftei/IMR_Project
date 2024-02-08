@@ -8,9 +8,11 @@ public class RecipeSelectionMenu : MonoBehaviour
     public TextMeshProUGUI recipeNameText;
     public GameObject[] availableRecipes;
     private int currentRecipeIndex = 13;
+    private AudioSource soundManager;
 
     void Start()
     {
+        soundManager = GetComponent<AudioSource>();
         UpdateRecipeName();
     }
 
@@ -25,9 +27,18 @@ public class RecipeSelectionMenu : MonoBehaviour
                 {
                     currentRecipeIndex = (currentRecipeIndex + 1) % availableRecipes.Length;
                 } while (availableRecipes[currentRecipeIndex].activeSelf == false);
-
+                soundManager.Play();
                 UpdateRecipeName();
             }
+        }
+        else
+        {
+            do
+            {
+                currentRecipeIndex = (currentRecipeIndex + 1) % availableRecipes.Length;
+            } while (availableRecipes[currentRecipeIndex].activeSelf == false);
+            soundManager.Play();
+            UpdateRecipeName();
         }
     }
 
@@ -42,8 +53,18 @@ public class RecipeSelectionMenu : MonoBehaviour
                 {
                     currentRecipeIndex = (currentRecipeIndex - 1 + availableRecipes.Length) % availableRecipes.Length;
                 } while (availableRecipes[currentRecipeIndex].activeSelf == false);
+                soundManager.Play();
                 UpdateRecipeName();
             }
+        }
+        else
+        {
+            do
+            {
+                currentRecipeIndex = (currentRecipeIndex - 1 + availableRecipes.Length) % availableRecipes.Length;
+            } while (availableRecipes[currentRecipeIndex].activeSelf == false);
+            soundManager.Play();
+            UpdateRecipeName();
         }
     }
 

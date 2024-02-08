@@ -4,15 +4,18 @@ using UnityEngine.SceneManagement;
 
 public class RewardScreen : MonoBehaviour
 {
+    public HandleGameState gameState;
     public GameObject canvas;
     public GameObject[] buttons;
     public GameObject[] allRecipes;
     private int numRecipes;
     private GameObject[] inactiveRecipePages = new GameObject[3];
     private GameObject[] selectedRecipes = new GameObject[3];
+    private AudioSource soundManager;
 
     void Start()
     {
+        soundManager = GetComponent<AudioSource>();
     }
 
     public void ActivateCanvas()
@@ -52,6 +55,7 @@ public class RewardScreen : MonoBehaviour
         numRecipes = Mathf.Min(inactiveRecipes.Length, 3); // Select at most 3 inactive recipes
         if (numRecipes == 0)
         {
+            gameState.StopAudio();
             PlayerPrefs.SetString("GameWon", "True");
             SceneManager.LoadSceneAsync("MainMenu");
         }
@@ -71,7 +75,8 @@ public class RewardScreen : MonoBehaviour
             foreach (GameObject page in inactiveRecipePages)
                 Destroy(page);
             selectedRecipes[0].SetActive(true); // Activate the original recipe page
-            PlayerPrefs.SetString("GameState", "Day");
+            soundManager.Play();
+            gameState.SwitchGameState();
             canvas.SetActive(false); // Deactivate the canvas
         }
     }
@@ -82,7 +87,8 @@ public class RewardScreen : MonoBehaviour
             foreach (GameObject page in inactiveRecipePages)
                 Destroy(page);
             selectedRecipes[1].SetActive(true); // Activate the original recipe page
-            PlayerPrefs.SetString("GameState", "Day");
+            soundManager.Play();
+            gameState.SwitchGameState();
             canvas.SetActive(false); // Deactivate the canvas
         }
     }
@@ -93,7 +99,8 @@ public class RewardScreen : MonoBehaviour
             foreach (GameObject page in inactiveRecipePages)
                 Destroy(page);
             selectedRecipes[2].SetActive(true); // Activate the original recipe page
-            PlayerPrefs.SetString("GameState", "Day");
+            soundManager.Play();
+            gameState.SwitchGameState();
             canvas.SetActive(false); // Deactivate the canvas
         }
     }
