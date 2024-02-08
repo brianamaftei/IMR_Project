@@ -24,6 +24,9 @@ TagManager:
   - Ice
   - Mint
   - OrangeSlice
+  - Bottle
+  - Shaker
+  - TopShaker
   layers:
   - Default
   - TransparentFX

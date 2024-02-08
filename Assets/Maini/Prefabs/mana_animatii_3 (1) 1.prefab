@@ -979,6 +979,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8145781945515419464}
   - component: {fileID: 2876548170152770866}
+  - component: {fileID: -4915398521910623522}
   m_Layer: 0
   m_Name: mana_animatii_3 (1) 1
   m_TagString: Untagged
@@ -1025,6 +1026,19 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &-4915398521910623522
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8809165295979396594}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 41af7ac9d2441454e9d17aa1dc1f6906, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  handController: {fileID: 4815781926118241294, guid: 9bda0981c82fa6d4b992ba5a9a700dfa, type: 3}
 --- !u!1 &9010994167769461447
 GameObject:
   m_ObjectHideFlags: 0

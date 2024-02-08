@@ -14,6 +14,12 @@ public class CoasterDrink : MonoBehaviour
 
     public bool doCollision = true;
 
+    public bool shakerIsUsed = false;
+    public GameObject TopShakerPrefab;
+    public GameObject ShakerPrefab;
+    public Transform TopShakerPoint;
+    public Transform ShakerPoint;
+
     private void Start()
     {
         soundManager = GetComponent<AudioSource>();
@@ -50,8 +56,11 @@ public class CoasterDrink : MonoBehaviour
                 {
                     sp.UpdateScore(ObjectsInCup, collidedObj.tag);
                 }
-                CreateEmptyGlass(collidedObj.tag, DrinkObject.transform.position);
+                CreateEmptyGlass(collidedObj.tag, transform.position);
                 Destroy(DrinkObject);
+
+                DestroyAndCreateShaker();
+
                 soundManager.Play();
             }
             doCollision = true;
@@ -99,4 +108,67 @@ public class CoasterDrink : MonoBehaviour
     {
         return ObjectsInCup;
     }
+
+    public void DestroyAndCreateShaker()
+    {
+        GameObject topShaker = GameObject.FindGameObjectWithTag("TopShaker");
+        GameObject shaker = GameObject.FindGameObjectWithTag("Shaker");
+
+        if (topShaker != null)
+        {
+            Destroy(topShaker);
+        }
+
+        if (shaker != null)
+        {
+            Destroy(shaker);
+        }
+
+        GameObject newTopShaker = Instantiate(TopShakerPrefab, TopShakerPoint.position, TopShakerPoint.rotation);
+
+        GameObject newShaker = Instantiate(ShakerPrefab, ShakerPoint.position, ShakerPoint.rotation);
+
+        Transform attachCapacPoint = newShaker.transform.Find("attach_capac");
+
+        if (attachCapacPoint != null)
+        {
+            TopShaker topShakerComponent = newTopShaker.GetComponent<TopShaker>();
+            if (topShakerComponent != null)
+            {
+                topShakerComponent.attachPoint = attachCapacPoint;
+            }
+            else
+            {
+                Debug.LogError("TopShaker nu e");
+            }
+        }
+        else
+        {
+            Debug.LogError("Punctul nu e");
+        }
+
+
+        Transform attachPoint = newTopShaker.transform.Find("attach");
+
+        if (attachPoint != null)
+        {
+            XRGrabInteractable grabInteractable = newTopShaker.GetComponent<XRGrabInteractable>();
+            if (grabInteractable != null)
+            {
+                grabInteractable.attachTransform = attachPoint;
+            }
+            else
+            {
+                Debug.LogError("XRGrabInteractable");
+            }
+        }
+        else
+        {
+            Debug.LogError("Punctul attach");
+        }
+
+
+
+    }
+
 }

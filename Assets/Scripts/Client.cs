@@ -10,14 +10,18 @@ public class Client : MonoBehaviour
     public List<GameObject> clientPrefabs;
     public Transform spawnPoint;
     public Transform bubbleSpawnPoint;
-    public TextMeshProUGUI bubbleTextMesh;
+    public GameObject bubbleObject;
+
     public string clientDrinkName;
     private GameObject currentClientObject;
     private GameObject currentBubbleObject;
 
     public Transform[] pathPoints;
     private Transform[] initialPathPoints;
-    public float duration = 5f;
+    public float duration = 3f;
+
+    private Animator animator;
+
     private AudioSource soundManager;
 
     public void SpawnClient()
@@ -29,6 +33,7 @@ public class Client : MonoBehaviour
         GameObject randomClientPrefab = clientPrefabs[randomIndex];
         currentClientObject = Instantiate(randomClientPrefab, spawnPoint.position, Quaternion.Euler(0, 90, 0));
 
+        animator = currentClientObject.GetComponent<Animator>();
 
         initialPathPoints = new Transform[pathPoints.Length];
         pathPoints.CopyTo(initialPathPoints, 0);
@@ -56,6 +61,8 @@ public class Client : MonoBehaviour
 
         t.OnComplete(() =>
         {
+            animator.SetBool("isWalking", false);
+
             currentClientObject.transform.Rotate(Vector3.up, -90.0f);
 
             ShowBubbleText();
@@ -67,14 +74,34 @@ public class Client : MonoBehaviour
 
     void ShowBubbleText()
     {           
-        bubbleTextMesh.text = clientDrinkName;
-        currentBubbleObject = Instantiate(bubbleTextMesh.gameObject, bubbleSpawnPoint.position, Quaternion.identity);
-        // StartCoroutine(DestroyBubble(currentBubbleObject, 40f));
+        if (bubbleObject != null)
+        {
+            TextMeshProUGUI bubbleTextMesh = bubbleObject.GetComponentInChildren<TextMeshProUGUI>();
+            if (bubbleTextMesh != null)
+            {
+                string message = "Please give me a good " + clientDrinkName;
+                bubbleTextMesh.text = message;
+                currentBubbleObject = Instantiate(bubbleObject, bubbleSpawnPoint.position, Quaternion.identity);
+                currentBubbleObject.transform.rotation = bubbleSpawnPoint.rotation;
 
+            }
+        }
+    }
+
+    void DestroyBubbleText()
+    {
+        if(currentBubbleObject != null)
+        {
+            Destroy(currentBubbleObject);
+            currentBubbleObject = null;
+        }
     }
 
     void MoveBack()
     {
+        DestroyBubbleText();
+        animator.SetBool("isWalking", true);
+
         System.Array.Reverse(initialPathPoints);
 
         GameObject copyOfClientObject = currentClientObject;
@@ -96,18 +123,6 @@ public class Client : MonoBehaviour
             DestroyObject(copyOfClientObject);
         });
     }
-
-    
-    // IEnumerator DestroyBubble(GameObject bubbleObject, float delay)
-    // {
-    //     yield return new WaitForSeconds(delay);
-
-    //     if (bubbleObject != null)
-    //     {
-    //         DestroyImmediate(bubbleObject, true);
-    //     }
-    // }
-
 
     public void DestroyClient()
     {

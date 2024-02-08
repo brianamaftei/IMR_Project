@@ -45,6 +45,26 @@ public class ObjectInfo
         }
     }
 
+    public void DeleteColorFromHistory(Color color)
+    {
+        if (colorHistory != null) 
+        {
+            if (colorHistory.ContainsKey(color))
+            {
+                colorHistory.Remove(color);
+            }
+            else
+            {
+                Debug.LogWarning("Color " + color.ToString() + " not found in history");
+            }
+        }
+        else
+        {
+            Debug.LogError("Color history dictionary is null");
+        }
+    }
+
+
     public Dictionary<Color, float> GetColorHistory()
     {
         return colorHistory;

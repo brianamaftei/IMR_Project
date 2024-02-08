@@ -15,7 +15,7 @@ public class PourDetector : MonoBehaviour
     private Material liquid;
     private void Start()
     {
-        soundManager = GetComponent<AudioSource>();
+        // soundManager = GetComponent<AudioSource>();
     }
 
     private void Update()
@@ -49,7 +49,7 @@ public class PourDetector : MonoBehaviour
         print("Start Pouring");
         currentStream = CreateStream();
         currentStream.liquidColor = ColorOfMaterial();
-        soundManager.Play();
+        // soundManager.Play();
         if (currentStream != null)
         {
             currentStream.Begin();
@@ -62,7 +62,7 @@ public class PourDetector : MonoBehaviour
     private void EndPour()
     {
         print("End Pouring");
-        soundManager.Stop();
+        // soundManager.Stop();
         currentStream.End();
         currentStream = null;
     }

@@ -182,7 +182,7 @@ public class ScorePoints : MonoBehaviour
         if (PlayerPrefs.HasKey("GameState"))
         {
             string oldState = PlayerPrefs.GetString("GameState");
-            if (oldState == "Day" && newScore >= 1000 + dayCounter * 150)
+            if (oldState == "Day" && newScore >= -1000)//1000 + dayCounter * 150)
             {
                 gameState.SwitchGameState();
                 score += newScore;
@@ -274,7 +274,7 @@ public class ScorePoints : MonoBehaviour
             print(oldState);
             if (oldState == "False")
             {
-                if (newPoints >= 1000 + dayCounter * 150)
+                if (newPoints >= 1000) // + dayCounter * 150)
                 {
                     soundManger.clip = soundSuccess;
                     soundManger.Play();
