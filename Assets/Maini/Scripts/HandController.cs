@@ -6,12 +6,12 @@ public class HandController : MonoBehaviour
     [SerializeField] private ActionBasedController handController;
 
     private Animator animator;
-    // private AudioSource soundManager;
+    private AudioSource soundManager;
 
     private void Awake()
     {
         animator = GetComponent<Animator>();
-        // soundManager = GetComponent<AudioSource>();
+        soundManager = GetComponent<AudioSource>();
 
         if (!handController)
         {
@@ -30,10 +30,10 @@ public class HandController : MonoBehaviour
         {
             bool isGrabbing = controller.selectAction.action.ReadValue<float>() > 0.0f;
             // Debug.Log(controller.selectAction.action.ReadValue<float>());
-            // if (animator.GetBool("IsGrabbing") == false && isGrabbing == true)
-            // {
-            //     soundManager.Play();
-            // }
+            if (animator.GetBool("IsGrabbing") == false && isGrabbing == true)
+            {
+                 soundManager.Play();
+            }
             animator.SetBool("IsGrabbing", isGrabbing);
         }
     }

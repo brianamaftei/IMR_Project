@@ -25,9 +25,6 @@ public class ScorePoints : MonoBehaviour
 
     private Client currentClient;
 
-    private GameObject HandleScorePoints;
-    private ScorePoints scorePointsComponent;
-
     private GameObject Canvas;
     private RecipeSelectionMenu canvasComponent;
 
@@ -175,14 +172,14 @@ public class ScorePoints : MonoBehaviour
         recipes.Add("Long Island Ice Tea", recipe);
     }
 
-    public void UpdateScore(Dictionary<string, ObjectInfo> objects, string glassTag)
+    public void UpdateScore(Dictionary<string, ObjectInfo> objects, string glassTag, bool shakerScore)
     {
-        newScore += UpdateValue(objects, glassTag);
+        newScore += UpdateValue(objects, glassTag, shakerScore);
         scoreBoard.text = $"Score: {score + newScore}";
         if (PlayerPrefs.HasKey("GameState"))
         {
             string oldState = PlayerPrefs.GetString("GameState");
-            if (oldState == "Day" && newScore >= -1000)//1000 + dayCounter * 150)
+            if (oldState == "Day" && newScore >= 1000 + dayCounter * 150)
             {
                 gameState.SwitchGameState();
                 score += newScore;
@@ -262,9 +259,9 @@ public class ScorePoints : MonoBehaviour
     }
 
 
-    public void UpdatePoints(Dictionary<string, ObjectInfo> objects, string glassTag)
+    public void UpdatePoints(Dictionary<string, ObjectInfo> objects, string glassTag, bool shakerScore)
     {
-        newPoints += UpdateValue(objects, glassTag);
+        newPoints += UpdateValue(objects, glassTag, shakerScore);
         scoreBoard.text = $"Points: {points + newPoints}";
         currentClient.DestroyClient();
         NextRecipe();
@@ -274,7 +271,7 @@ public class ScorePoints : MonoBehaviour
             print(oldState);
             if (oldState == "False")
             {
-                if (newPoints >= 1000) // + dayCounter * 150)
+                if (newPoints >= 1000 + dayCounter * 150)
                 {
                     soundManger.clip = soundSuccess;
                     soundManger.Play();
@@ -292,7 +289,7 @@ public class ScorePoints : MonoBehaviour
             }
         }
     }
-    private float UpdateValue(Dictionary<string, ObjectInfo> objects, string glassTag)
+    private float UpdateValue(Dictionary<string, ObjectInfo> objects, string glassTag, bool shakerScore)
     {
         float val = 0f;
         var recipe = recipes[selectedRecipe.text];
@@ -341,6 +338,10 @@ public class ScorePoints : MonoBehaviour
         if (recipe.ContainsKey(glassTag))
         {
             val += 50f;
+        }
+        if (shakerScore)
+        {
+            val += 100f;
         }
         return val;
     }

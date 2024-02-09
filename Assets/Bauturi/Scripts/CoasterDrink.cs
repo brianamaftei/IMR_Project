@@ -20,6 +20,8 @@ public class CoasterDrink : MonoBehaviour
     public Transform TopShakerPoint;
     public Transform ShakerPoint;
 
+    public bool shakerScore = false;
+
     private void Start()
     {
         soundManager = GetComponent<AudioSource>();
@@ -39,7 +41,7 @@ public class CoasterDrink : MonoBehaviour
             {
                 ObjectsInCup = drinkComponent.GetObjectsInCup();
                 PrintObjectsInCup();
-            }                  
+            }
 
             XRGrabInteractable grabInteractable = DrinkObject.GetComponent<XRGrabInteractable>();
             if (grabInteractable != null)
@@ -48,13 +50,13 @@ public class CoasterDrink : MonoBehaviour
                 {
                     string oldState = PlayerPrefs.GetString("GameState");
                     if (oldState == "Day")
-                        sp.UpdateScore(ObjectsInCup, collidedObj.tag);
+                        sp.UpdateScore(ObjectsInCup, collidedObj.tag, shakerScore);
                     else
-                        sp.UpdatePoints(ObjectsInCup, collidedObj.tag);
+                        sp.UpdatePoints(ObjectsInCup, collidedObj.tag, shakerScore);
                 }
                 else
                 {
-                    sp.UpdateScore(ObjectsInCup, collidedObj.tag);
+                    sp.UpdateScore(ObjectsInCup, collidedObj.tag, shakerScore);
                 }
                 CreateEmptyGlass(collidedObj.tag, transform.position);
                 Destroy(DrinkObject);
@@ -70,7 +72,7 @@ public class CoasterDrink : MonoBehaviour
 
     private void CreateEmptyGlass(string glassTag, Vector3 spawnPosition)
     {
-        List<GameObject> prefabsList =  new List<GameObject>(prefabArray);
+        List<GameObject> prefabsList = new List<GameObject>(prefabArray);
         GameObject selectedPrefab = prefabsList.Find(prefab => prefab.tag == glassTag);
 
         if (selectedPrefab != null)
@@ -82,7 +84,7 @@ public class CoasterDrink : MonoBehaviour
         else
         {
             Debug.LogWarning("Prefab with tag " + glassTag + " not found in the list");
-        } 
+        }
     }
 
     public GameObject GetDrinkObject()
@@ -103,7 +105,7 @@ public class CoasterDrink : MonoBehaviour
         return DrinkObject.tag;
     }
 
-    
+
     public Dictionary<string, ObjectInfo> GetObjectsInCup()
     {
         return ObjectsInCup;
@@ -113,6 +115,21 @@ public class CoasterDrink : MonoBehaviour
     {
         GameObject topShaker = GameObject.FindGameObjectWithTag("TopShaker");
         GameObject shaker = GameObject.FindGameObjectWithTag("Shaker");
+
+
+        if (shaker != null)
+        {
+            Shaker shakerComponent = shaker.GetComponent<Shaker>();
+
+            if (shakerComponent != null)
+            {
+                if (shakerComponent.movementCount > 20)
+                {
+                    shakerScore = true;
+                    Debug.Log("Shakerul a fost folosit");
+                }
+            }
+        }
 
         if (topShaker != null)
         {
@@ -137,14 +154,7 @@ public class CoasterDrink : MonoBehaviour
             {
                 topShakerComponent.attachPoint = attachCapacPoint;
             }
-            else
-            {
-                Debug.LogError("TopShaker nu e");
-            }
-        }
-        else
-        {
-            Debug.LogError("Punctul nu e");
+
         }
 
 
@@ -157,17 +167,8 @@ public class CoasterDrink : MonoBehaviour
             {
                 grabInteractable.attachTransform = attachPoint;
             }
-            else
-            {
-                Debug.LogError("XRGrabInteractable");
-            }
-        }
-        else
-        {
-            Debug.LogError("Punctul attach");
-        }
 
-
+        }
 
     }
 
