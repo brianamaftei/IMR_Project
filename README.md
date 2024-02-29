@@ -1,6 +1,11 @@
 # Master Mixologist  
 
-Demo of final project: https://youtu.be/dU87mu3IJWk
+-------------
+
+Presentation of final project: https://docs.google.com/presentation/d/1OiI3PTlQguHJrCsmv7qcFIIHESmB7NZ81ElYoVEMSU4/edit?usp=sharing
+Demo: https://youtu.be/dU87mu3IJWk
+
+----------------
 
 State of the art:  
 https://docs.google.com/document/d/1ZoCLF33HKUQQ8GL6eirE1mvY0AZWB_ZKBkG8nheimPY/edit?usp=sharing  
